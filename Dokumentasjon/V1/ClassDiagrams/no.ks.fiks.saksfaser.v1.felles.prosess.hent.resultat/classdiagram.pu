@@ -1,0 +1,8 @@
+@startuml
+class HentProsessResultat {
+    +prosesser: Prosesser[]
+}
+
+HentProsessResultat -* Prosess
+
+@enduml

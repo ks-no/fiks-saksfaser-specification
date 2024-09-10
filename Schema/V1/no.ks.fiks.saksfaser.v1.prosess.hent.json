@@ -7,9 +7,13 @@
     "properties": {
         "fasenavn": {
             "type": "string"
+        },
+        "saksnummer": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.saksnummer.schema.json" 
         }
     },
     "required": [
-        "fasenavn"
+        "fasenavn",
+        "saksnummer"
     ]
 }

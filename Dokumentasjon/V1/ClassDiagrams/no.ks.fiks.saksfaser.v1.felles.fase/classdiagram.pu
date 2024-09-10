@@ -1,0 +1,5 @@
+@startuml
+class Fase {
+    +fasenavn: string
+}
+@enduml

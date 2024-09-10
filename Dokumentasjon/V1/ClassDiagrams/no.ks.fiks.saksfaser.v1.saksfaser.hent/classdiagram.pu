@@ -1,0 +1,8 @@
+@startuml
+class HentSaksfaser {
+    +saksnummer: Saksnummer
+}
+
+HentSaksfaser -- Saksnummer
+
+@enduml

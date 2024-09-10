@@ -1,0 +1,9 @@
+@startuml
+class Adresse {
+    +adressekode: string
+    +adressenavn: string
+    +adressenummer: int
+    +adressebokstav: string
+    +seksjonsnummer: int
+}
+@enduml

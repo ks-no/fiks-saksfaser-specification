@@ -7,7 +7,7 @@
         "saksnummer": {
             "$ref": "no.ks.fiks.saksfaser.v1.felles.saksnummer.schema.json"
         },
-        "systemid": {
+        "systemId": {
             "type": "string"
         },
         "tittel": {

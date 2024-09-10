@@ -1,11 +1,11 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "no.ks.fiks.saksfaser.v1.prosess.hent.schema.resultat.json",
-    "title": "HentProsess",
+    "$id": "no.ks.fiks.saksfaser.v1.prosess.hent.resultat.schema.resultat.json",
+    "title": "HentProsessResultat",
     "definitions": {},
     "type": "object",
     "properties": {
-        "prosess": {
+        "prosesser": {
             "$ref": "no.ks.fiks.saksfaser.v1.felles.prosess.schema.json"
         }
     }

@@ -1,0 +1,20 @@
+@startuml
+class Prosess {
+    +systemId: string
+    +saksnummer: Saksnummer
+    +milepeler: Milepel[]
+    +kategori: Kode
+    +antallUkerFrist: int
+    +medDispensasjon: boolean
+    +medReguleringsendring: boolean
+    +prosesskoe: string
+    +prosessteam: string
+    +prosessansvarlig: string
+    +gebyrunderlag: Gebyrunderlag
+}
+
+Prosess --Saksnummer
+Prosess -* Milepel
+Prosess -- Gebyrunderlag
+
+@enduml

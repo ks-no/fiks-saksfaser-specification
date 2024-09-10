@@ -1,0 +1,10 @@
+@startuml
+class SaksfaserHentResultat {
+    +byggesak: Byggesak
+    +faser: Fase[]
+}
+
+SaksfaserHentResultat -- Byggesak
+SaksfaserHentResultat -* Fase
+
+@enduml
