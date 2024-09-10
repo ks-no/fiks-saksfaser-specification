@@ -18,6 +18,7 @@ Byggesak -* Saksnummer
 Byggesak -* NasjonalArealplanId
 Byggesak -- Matrikkelopplysninger
 Byggesak -- Posisjon
+Byggesak -- Adresse
 Byggesak -- Kode
 
 @enduml

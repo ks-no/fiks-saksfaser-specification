@@ -26,3 +26,35 @@ Datamodell kan baseres på eByggesak.
 - Tjener (tjener part) i protokollen er typisk saksbehandlingssystemer, og klient (klient part) er typisk publiseringssystemer.
 T- jener vil kun gi offentlige data, ikke skjermet data.
 - Det er viktig at vi får frikoblet faser og milepæler
+
+### Klassediagram
+
+
+#### Melding - Hent saksfaser
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfaser.hent/classdiagram.svg)
+
+#### Melding - Hent saksfaser resultat
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfaser.hent.resultat/classdiagram.svg)
+
+
+#### Melding - Hent prosess
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.prosess.hent/classdiagram.svg)
+
+#### Melding - Hent prosess resultat
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.prosess.hent.resultat/classdiagram.svg)
+
+#### Byggesak
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.byggesak/classdiagram.svg)
+
+#### Adresse
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.adresse/classdiagram.svg)
+
+#### Prosess
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.prosess/classdiagram.svg)
