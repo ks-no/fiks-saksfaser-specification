@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.nasjonalarealplanid.schema.json",
+    "title": "NasjonalArealplanId",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "administrativEnhet": {
+            "properties": {
+                "type": {
+                    "enum": ["kommunenummer", "fylkesnummer", "landskode"]
+                },
+                "nummer": {
+                    "type": "string"
+                }
+            },
+        },
+        "planidentifikasjon": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "administrativEnhet",
+        "planidentifikasjon"
+    ]
+}

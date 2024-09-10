@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.tiltakstype.schema.json",
+    "description": "TODO: Finne ut hvordan denne skal se ut? Er det en kodeliste?",
+    "title": "Tiltakstype",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        
+    },
+    "required": [
+    ]
+}

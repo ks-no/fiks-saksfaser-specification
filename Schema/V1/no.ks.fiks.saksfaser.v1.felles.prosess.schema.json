@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksnummer.v1.felles.prosess.schema.json",
+    "title": "Prosess",
+    "type": "object",
+    "properties": {
+        "systemId": {
+            "type": "string"
+        },
+        "milepeler": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.milepel.schema.json"
+            }
+        },
+        "kategori": {
+            "type": "object",
+            "description" : "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.prosesskategori.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            }
+        },
+        "antallUkerFrist": {
+            "type": "number"
+        },
+        "medDispensasjon": {
+            "type": "boolean"
+        },
+        "medReguleringsendring": {
+            "type": "boolean"
+        },
+        "prosesskoe": {
+            "type": "string"
+        },
+        "prosessteam": {
+            "type": "string"
+        },
+        "prosessansvarlig": {
+            "type": "string"
+        },
+        "gebyrunderlag": {
+            "description": "Skal denne være med?",
+            "$ref": "todo"
+        }
+    },
+    "required": [
+    ]
+}

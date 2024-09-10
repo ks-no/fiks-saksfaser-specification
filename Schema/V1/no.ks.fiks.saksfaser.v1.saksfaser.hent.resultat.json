@@ -1,0 +1,18 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "no.ks.fiks.saksfaser.v1.saksfaser.hent.resultat.schema.json",
+    "title": "HentSaksfaserResultat",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "byggesak": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.byggesak.schema.json"
+        },
+        "faser": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.fase.schema.json"
+            }
+        }
+    }
+}

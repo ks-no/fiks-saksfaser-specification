@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksnummer.v1.felles.fase.schema.json",
+    "title": "fase",
+    "type": "object",
+    "properties": {
+        "fasenavn": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "fasenavn",
+    ]
+}

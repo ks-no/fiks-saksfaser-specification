@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.matrikkelopplysninger.schema.json",
+    "description": "TODO: Gjøre denne ferdig basert på diagram i eByggesak v2.1",
+    "title": "Matrikkelopplysning",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        
+    },
+    "required": [
+    ]
+}

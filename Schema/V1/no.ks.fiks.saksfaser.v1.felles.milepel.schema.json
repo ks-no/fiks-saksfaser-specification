@@ -1,0 +1,52 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksnummer.v1.felles.milepel.schema.json",
+    "title": "Milepel",
+    "type": "object",
+    "properties": {
+        "systemId": {
+            "type": "string"
+        },
+        "beskrivelse": {
+            "type": "string"
+        },
+        "kategori": {
+            "type": "object",
+            "description" : "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.prosesskategori.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            }
+        },
+        "frist": {
+            "type": "date"
+        },
+        "utfoert": {
+            "type": "date"
+        },
+        "journaldato": {
+            "type": "date"
+        },
+        "intern": {
+            "type": "boolean"
+        },
+        "referanseJournalpost": {
+            "type": "string"
+        },
+        "referanseDokument": {
+            "type": "string"
+        },
+        "faseFoerMilepel": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.fase.schema.json"
+        },
+        "faseEtterMilepel": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.fase.schema.json"
+        }
+    },
+    "required": [
+    ]
+}
