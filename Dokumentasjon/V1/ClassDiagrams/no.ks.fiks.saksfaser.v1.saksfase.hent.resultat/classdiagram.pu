@@ -40,7 +40,7 @@ class Milepel {
     +erSlutt: boolean
     +status: MilepelStatusEnum
     +erGlobal: boolean
-    +dokument: Dokument[]
+    +dokumenter: Dokument[]
 }
 
 Milepel -- MilepelStatusEnum
