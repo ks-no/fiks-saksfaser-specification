@@ -17,12 +17,12 @@ class Fase {
     +milepeler: Milepel[]
     +global: boolean
     +status: FaseStatusEnum
-    +vedtak: Kode
+    +vedtak: Vedtak
 }
 
-Fase -- Kode
+Fase -- Vedtak
 
-class Kode {
+class Vedtak <<Kode>> {
     +beskrivelse: string
     +verdi: string
 }
@@ -54,6 +54,12 @@ class Milepel {
 }
 
 Milepel -- MilepelStatusEnum
+Milepel -- MilepelKategori
+
+class MilepelKategori <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
 
 enum MilepelStatusEnum {
     +Nådd

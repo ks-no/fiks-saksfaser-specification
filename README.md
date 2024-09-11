@@ -30,7 +30,7 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 - Det er viktig at vi får frikoblet faser og milepæler
 
 #### Fra møtet 11.09.2024
-- Vi gikk gjennom utkastene som var laget og gjorde endringer i klasseidagrammene. Se siste versjoner lenger nede og kom med kommentarer som nytt issue.
+- Vi gikk gjennom utkastene som var laget og gjorde endringer i klassediagrammene. Se siste versjoner lenger nede under [Klassediagram](#klassediagram) og kom gjerne med kommentarer som nytt issue [her](https://github.com/ks-no/fiks-saksfaser-specification/issues).
 
 ### Json schemas
 _Schemas er ikke oppdatert. Se klassediagram under for innspill_

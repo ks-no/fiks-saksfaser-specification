@@ -16,14 +16,6 @@ class Fase {
 }
 
 Fase -* Dokument
-
-class Dokument {
-    +referanseDokumentFil: string
-    +type: string
-    +beskrivelse: string
-    +filnavn: string
-}
-
 Fase -- Milepel
 
 class Milepel {
@@ -49,6 +41,30 @@ Milepel -* Dokument
 enum MilepelStatusEnum {
     +Nådd
     +Planlagt
+}
+
+note top of Dokument : Hentet definisjon fra Fiks Plan
+
+class Dokument {
+    +tittel: string
+    +dokumenttype: Dokumenttype
+    +referanseDokumentfil: ReferanseDokumentfil
+    +mimetype: string
+    +dokumentsdato: date
+    +arkivnavn: string
+}
+
+Dokument -- Dokumenttype
+Dokument -- ReferanseDokumentfil
+
+class Dokumenttype <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class ReferanseDokumentfil {
+    +id: string
+    +url: string
 }
 
 @enduml
