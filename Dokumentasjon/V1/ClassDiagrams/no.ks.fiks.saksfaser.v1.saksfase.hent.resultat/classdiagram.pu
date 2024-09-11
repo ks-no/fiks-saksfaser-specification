@@ -1,15 +1,10 @@
 @startuml
-class SaksfaserHentResultat {
-    +saksnummer: Saksnummer
-    +sakstittel: string
-    +saksansvarlig: string
-    +faser: Fase[]
+
+class HentSaksfaseResultat {
+    +fase: Fase
 }
 
-SaksfaserHentResultat -* Fase
-SaksfaserHentResultat -- Saksnummer
-
-note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nSkal vi ha med vedtak som kode?\nVedtak som: godkjent, delvis godkjent, avslått, avvist osv. 
+HentSaksfaseResultat -- Fase
 
 class Fase {
     +fasenavn: string
@@ -17,22 +12,16 @@ class Fase {
     +milepeler: Milepel[]
     +global: boolean
     +status: FaseStatusEnum
-    +vedtak: Kode
+    +dokumenter: Dokument[]
 }
 
-Fase -- Kode
+Fase -* Dokument
 
-class Kode {
+class Dokument {
+    +referanseDokumentFil: string
+    +type: string
     +beskrivelse: string
-    +verdi: string
-}
-
-Fase -- FaseStatusEnum
-
-enum FaseStatusEnum {
-    +Planlagt
-    +UnderArbeid
-    +Utfoert
+    +filnavn: string
 }
 
 Fase -- Milepel
@@ -51,18 +40,15 @@ class Milepel {
     +erSlutt: boolean
     +status: MilepelStatusEnum
     +erGlobal: boolean
+    +dokument: Dokument[]
 }
 
 Milepel -- MilepelStatusEnum
+Milepel -* Dokument
 
 enum MilepelStatusEnum {
     +Nådd
     +Planlagt
-}
-
-class Saksnummer {
-    +saksaar: integer
-    +sakssekvensnummer: integer 
 }
 
 @enduml

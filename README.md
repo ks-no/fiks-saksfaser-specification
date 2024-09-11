@@ -27,6 +27,9 @@ Datamodell kan baseres på eByggesak.
 T- jener vil kun gi offentlige data, ikke skjermet data.
 - Det er viktig at vi får frikoblet faser og milepæler
 
+### Json schemas
+_Schemas er ikke oppdatert. Se klassediagram under for innspill_
+
 ### Klassediagram
 
 
@@ -39,22 +42,14 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 ![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfaser.hent.resultat/classdiagram.svg)
 
 
-#### Melding - Hent prosess
+#### Melding - Hent saksfase
+
+Henter en enkelt saksfase basert på saksnummer og faseid.
+Faseid får man ut fra hent saksfaser tjenesten.
 
 ![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.prosess.hent/classdiagram.svg)
 
-#### Melding - Hent prosess resultat
+#### Melding - Hent saksfase resultat
 
-![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.prosess.hent.resultat/classdiagram.svg)
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfase.hent.resultat/classdiagram.svg)
 
-#### Byggesak
-
-![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.byggesak/classdiagram.svg)
-
-#### Adresse
-
-![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.adresse/classdiagram.svg)
-
-#### Prosess
-
-![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.prosess/classdiagram.svg)

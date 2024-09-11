@@ -1,9 +1,9 @@
 @startuml
-class HentProsess {
-    +fasenavn: string
+class HentFase {
     +saksnummer: Saksnummer
+    +faseid: string
 }
 
-HentProsess -- Saksnummer
+HentFase -- Saksnummer
 
 @enduml
