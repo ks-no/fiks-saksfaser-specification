@@ -7,4 +7,7 @@ class SaksfaserHentResultat {
 SaksfaserHentResultat -- Byggesak
 SaksfaserHentResultat -* Fase
 
+note top of Byggesak : Skal byggesak være med?
+
+
 @enduml

@@ -1,0 +1,26 @@
+@startuml
+
+class Milepel {
+    +systemId: string
+    +beskrivelse: string
+    +kategori: Kode
+    +frist: date,
+    +utfoert: date
+    +journaldato: date
+    +intern: boolean
+    +referanseJournalpost: string
+    +referanseDokument: string
+    +fase: Fase
+    +faseFoerMilepel: Fase
+    +faseEtterMilepel: Fase
+}
+
+Milepel -- Kode
+Milepel -- Fase
+
+class Kode {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+@enduml

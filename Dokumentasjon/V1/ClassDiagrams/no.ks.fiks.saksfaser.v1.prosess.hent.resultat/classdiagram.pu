@@ -1,8 +1,61 @@
 @startuml
 class HentProsessResultat {
     +prosesser: Prosesser[]
+    +fase: Fase
 }
 
 HentProsessResultat -* Prosess
+HentProsessResultat -- Fase
+
+class Prosess {
+    +systemId: string
+    +saksnummer: Saksnummer
+    +milepeler: Milepel[]
+    +kategori: Kode
+    +antallUkerFrist: int
+    +medDispensasjon: boolean
+    +medReguleringsendring: boolean
+    +prosesskoe: string
+    +prosessteam: string
+    +prosessansvarlig: string
+    +gebyrunderlag: Gebyrunderlag
+}
+
+Prosess --Saksnummer
+Prosess -* Milepel
+Prosess -- Gebyrunderlag
+Prosess -- Kode
+
+class Saksnummer {
+    +saksaar: integer
+    +sakssekvensnummer: integer 
+}
+
+class Milepel {
+    +systemId: string
+    +beskrivelse: string
+    +kategori: Kode
+    +frist: date,
+    +utfoert: date
+    +journaldato: date
+    +intern: boolean
+    +referanseJournalpost: string
+    +referanseDokument: string
+    +faseFoerMilepel: Fase
+    +faseEtterMilepel: Fase
+}
+
+Milepel -- Kode
+Milepel -- Fase
+
+class Kode {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+note top of Gebyrunderlag : Skal gebyrunderlag være med?
+note top of HentProsessResultat : Fase med for å vise hvilken fase man får svar for?
+
+
 
 @enduml

@@ -17,4 +17,9 @@ Prosess --Saksnummer
 Prosess -* Milepel
 Prosess -- Gebyrunderlag
 
+class Saksnummer {
+    +saksaar: integer
+    +sakssekvensnummer: integer 
+}
+
 @enduml
