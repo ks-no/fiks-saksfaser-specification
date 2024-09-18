@@ -30,10 +30,16 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 - Det er viktig at vi får frikoblet faser og milepæler
 
 #### Fra møtet 11.09.2024
-- Vi gikk gjennom utkastene som var laget og gjorde endringer i klassediagrammene. Se siste versjoner lenger nede under [Klassediagram](#klassediagram) og kom gjerne med kommentarer som nytt issue [her](https://github.com/ks-no/fiks-saksfaser-specification/issues).
+- Vi gikk gjennom utkastene som var laget og gjorde endringer i klassediagrammene. Se siste versjoner lenger nede under [Klassediagram](#klassediagram) og kom gjerne med kommentarer som nytt issue [her](https://github.com/ks-no/fiks-saksfaser-specification/issues). 
 
 #### Fra møtet 18.09.2024
 - Vi jobbet videre med resultat for hent saksfaser. Endringer er gjort i uml. Se diagram under.
+- Hent Saksfase skal ikke trenge saksnummer som nøkkel. Kun faseid.
+- Vi korrigerte noen navn på kodeobjekter.
+- Global/intern som attributt på fase og milepel er ikke nødvendig da interne data ikke skal komme som noe resultat i denne protkollen. Kun globale data som skal vises.
+- Kodeverdi og kodebeskrivelse for kode-objekter er navn hentet fra andre protokoller som vi ønsker å bruke videre i denne protokollen.
+- Det ble diskutert om Milepel som objekt burde være likt i Hent saksfaser og Hent saksfase. Vi konkluderte ikke noe her, men tar det opp igjen på neste møte. Det er fordeler og ulemper med å gjøre det likt.
+
 
 ### Json schemas
 _Schemas er ikke oppdatert. Se klassediagram under for innspill_
@@ -56,7 +62,7 @@ _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 Henter en enkelt saksfase basert på saksnummer og faseid.
 Faseid får man ut fra hent saksfaser tjenesten.
 
-![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.prosess.hent/classdiagram.svg)
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfase.hent/classdiagram.svg)
 
 #### Melding - Hent saksfase resultat
 
