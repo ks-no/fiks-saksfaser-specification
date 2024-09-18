@@ -1,9 +1,0 @@
-@startuml
-class HentFase {
-    +saksnummer: Saksnummer
-    +faseid: string
-}
-
-HentFase -- Saksnummer
-
-@enduml

@@ -32,6 +32,9 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 #### Fra møtet 11.09.2024
 - Vi gikk gjennom utkastene som var laget og gjorde endringer i klassediagrammene. Se siste versjoner lenger nede under [Klassediagram](#klassediagram) og kom gjerne med kommentarer som nytt issue [her](https://github.com/ks-no/fiks-saksfaser-specification/issues).
 
+#### Fra møtet 18.09.2024
+- Vi jobbet videre med resultat for hent saksfaser. Endringer er gjort i uml. Se diagram under.
+
 ### Json schemas
 _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 
@@ -46,7 +49,6 @@ _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 
 ![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfaser.hent.resultat/classdiagram.svg)
 
-- Vedtak som Kode under Fase?
 - Milepeler er liste under fase. Kan være 2, start og slutt, eller flere. Alt etter brukstilfelle.
 
 #### Melding - Hent saksfase

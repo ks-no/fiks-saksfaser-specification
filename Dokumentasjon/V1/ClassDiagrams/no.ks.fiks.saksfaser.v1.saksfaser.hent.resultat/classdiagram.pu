@@ -9,22 +9,28 @@ class SaksfaserHentResultat {
 SaksfaserHentResultat -* Fase
 SaksfaserHentResultat -- Saksnummer
 
-note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nSkal vi ha med vedtak som kode?\nVedtak som: godkjent, delvis godkjent, avslått, avvist osv. 
+note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg. 
 
 class Fase {
     +fasenavn: string
     +faseid: string
     +milepeler: Milepel[]
-    +global: boolean
     +status: FaseStatusEnum
     +vedtak: Vedtak
 }
 
+note right of Fase::faseid
+    Faseid brukes alene (ikke sammen med saksnummer) for å hente en enkelt fase
+    Den må dermed være unik 
+end note
+
 Fase -- Vedtak
 
+note top of Vedtak : Eksempler:\ngodkjent\ndelvis godkjent\navslått\navvist 
+
 class Vedtak <<Kode>> {
-    +beskrivelse: string
-    +verdi: string
+    +kodeverdi: string
+    +kodebeskrivelse: string
 }
 
 Fase -- FaseStatusEnum
@@ -37,26 +43,28 @@ enum FaseStatusEnum {
 
 Fase -- Milepel
 
+note top of Milepel: frist og utfoert ikke påkrevd
+
 class Milepel {
     +systemId: string
     +beskrivelse: string
-    +kategori: Kode
+    +kategori: Milepeltype
     +frist: date
     +utfoert: date
     +journaldato: date
-    +intern: boolean
     +referanseJournalpost: string
     +referanseDokument: string
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
-    +erGlobal: boolean
 }
 
 Milepel -- MilepelStatusEnum
-Milepel -- MilepelKategori
+Milepel -- Milepeltype
 
-class MilepelKategori <<Kode>> {
+note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
+ 
+class Milepeltype <<Kode>> {
     +kodeverdi: string
     +kodebeskrivelse: string
 }

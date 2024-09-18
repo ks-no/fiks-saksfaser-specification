@@ -9,6 +9,7 @@ HentSaksfaseResultat -- Fase
 class Fase {
     +fasenavn: string
     +faseid: string
+    +kategori: Fasekategori
     +milepeler: Milepel[]
     +global: boolean
     +status: FaseStatusEnum
@@ -18,10 +19,17 @@ class Fase {
 Fase -* Dokument
 Fase -- Milepel
 
+Fase -- Fasekategori
+
+class Fasekategori <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
 class Milepel {
     +systemId: string
     +beskrivelse: string
-    +kategori: Kode
+    +kategori: Milepeltype
     +frist: date
     +utfoert: date
     +journaldato: date
@@ -34,6 +42,16 @@ class Milepel {
     +erGlobal: boolean
     +dokumenter: Dokument[]
 }
+
+Milepel -- Milepeltype
+
+note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
+ 
+class Milepeltype <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
 
 Milepel -- MilepelStatusEnum
 Milepel -* Dokument

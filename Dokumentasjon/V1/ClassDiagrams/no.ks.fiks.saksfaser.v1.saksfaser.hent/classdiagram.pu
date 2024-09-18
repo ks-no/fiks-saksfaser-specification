@@ -1,4 +1,5 @@
 @startuml
+
 class HentSaksfaser {
     +saksnummer: Saksnummer
 }
