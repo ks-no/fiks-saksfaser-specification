@@ -11,15 +11,22 @@ class Fase {
     +faseid: string
     +kategori: Fasekategori
     +milepeler: Milepel[]
-    +global: boolean
     +status: FaseStatusEnum
+    +vedtak: Vedtak
     +dokumenter: Dokument[]
 }
 
 Fase -* Dokument
 Fase -- Milepel
-
 Fase -- Fasekategori
+Fase -- Vedtak
+
+note top of Vedtak : Eksempler:\ngodkjent\ndelvis godkjent\navslått\navvist 
+
+class Vedtak <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
 
 class Fasekategori <<Kode>> {
     +kodeverdi: string
