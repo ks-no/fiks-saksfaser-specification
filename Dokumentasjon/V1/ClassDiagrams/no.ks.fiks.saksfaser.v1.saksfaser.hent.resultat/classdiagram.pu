@@ -16,6 +16,7 @@ class Fase {
     +faseid: string
     +milepeler: Milepel[]
     +status: FaseStatusEnum
+    +kategori: Fasekategori
     +vedtak: Vedtak
 }
 
@@ -24,6 +25,15 @@ note right of Fase::faseid
     Den må dermed være unik 
 end note
 
+class Fasekategori <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+note bottom of Fasekategori : Se gjerne Byggesaksbehandling::Prosesskategori\n fra NPS\nVi må få avklart denne kodelisten\nEksempler:\nKlage\nHøring 
+
+
+Fase -- Fasekategori
 Fase -- Vedtak
 
 note top of Vedtak : Eksempler:\ngodkjent\ndelvis godkjent\navslått\navvist 
@@ -43,7 +53,7 @@ enum FaseStatusEnum {
 
 Fase -- Milepel
 
-note top of Milepel: frist og utfoert ikke påkrevd
+note bottom of Milepel: frist og utfoert ikke påkrevd
 
 class Milepel {
     +systemId: string
@@ -62,7 +72,7 @@ class Milepel {
 Milepel -- MilepelStatusEnum
 Milepel -- Milepeltype
 
-note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
+note bottom of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
  
 class Milepeltype <<Kode>> {
     +kodeverdi: string

@@ -5,8 +5,14 @@
     "definitions": {},
     "type": "object",
     "properties": {
-        "byggesak": {
-            "$ref": "no.ks.fiks.saksfaser.v1.felles.byggesak.schema.json"
+        "saksnummer": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.saksnummer.schema.json"
+        },
+        "sakstittel": {
+            "type": "string"
+        },
+        "saksansvarlig": {
+            "type": "string"
         },
         "faser": {
             "type": "array",

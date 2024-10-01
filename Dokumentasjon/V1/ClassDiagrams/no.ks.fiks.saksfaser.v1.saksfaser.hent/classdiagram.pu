@@ -6,4 +6,9 @@ class HentSaksfaser {
 
 HentSaksfaser -- Saksnummer
 
+class Saksnummer {
+    +saksaar: integer
+    +sakssekvensnummer: integer 
+}
+
 @enduml

@@ -1,5 +1,67 @@
 @startuml
+
 class Fase {
     +fasenavn: string
+    +faseid: string
+    +kategori: Fasekategori
+    +milepeler: Milepel[]
+    +status: FaseStatusEnum
+    +vedtak: Vedtak
+    +dokumenter: Dokument[]
 }
+
+Fase -* Dokument
+Fase -- Milepel
+Fase -- Fasekategori
+Fase -- Vedtak
+Fase -- FaseStatusEnum
+
+enum FaseStatusEnum {
+    +Planlagt
+    +UnderArbeid
+    +Utfoert
+}
+
+note top of Vedtak : Eksempler:\ngodkjent\ndelvis godkjent\navslått\navvist 
+
+class Vedtak <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class Fasekategori <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class Milepel {
+    +systemId: string
+    +beskrivelse: string
+    +kategori: Milepeltype
+    +frist: date
+    +utfoert: date
+    +journaldato: date
+    +intern: boolean
+    +referanseJournalpost: string
+    +referanseDokument: string
+    +erStart: boolean
+    +erSlutt: boolean
+    +status: MilepelStatusEnum
+    +erGlobal: boolean
+    +dokumenter: Dokument[]
+}
+
+Milepel -- Milepeltype
+
+class Dokument {
+    +id: string
+    +tittel: string
+    +filnavn: string
+    +dokumenttype: Dokumenttype
+    +referanseDokumentfil: ReferanseDokumentfil
+    +mimetype: string
+    +dokumentsdato: date
+    +arkivnavn: string
+}
+
 @enduml

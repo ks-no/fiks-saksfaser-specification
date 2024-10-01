@@ -6,9 +6,52 @@
     "properties": {
         "fasenavn": {
             "type": "string"
+        },
+        "faseid": {
+            "type": "string"
+        },
+        "kategori": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.fasekategori.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            }
+        },
+        "milepeler": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.milepel.schema.json"
+            }
+        },
+        "status": {
+            "type": "string",
+            "enum": ["Planlagt", "UnderArbeid", "Utfoert"]            
+        },
+        "vedtak": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.vedtak.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            }
+        },
+        "dokumenter": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.dokument.schema.json"
+            }
         }
     },
     "required": [
-        "fasenavn",
+        "fasenavn"
     ]
 }

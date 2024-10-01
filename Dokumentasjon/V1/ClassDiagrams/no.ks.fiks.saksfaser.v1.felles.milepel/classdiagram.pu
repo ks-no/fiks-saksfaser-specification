@@ -3,24 +3,33 @@
 class Milepel {
     +systemId: string
     +beskrivelse: string
-    +kategori: Kode
-    +frist: date,
+    +kategori: Milepeltype
+    +frist: date
     +utfoert: date
     +journaldato: date
     +intern: boolean
     +referanseJournalpost: string
     +referanseDokument: string
-    +fase: Fase
-    +faseFoerMilepel: Fase
-    +faseEtterMilepel: Fase
+    +erStart: boolean
+    +erSlutt: boolean
+    +status: MilepelStatusEnum
+    +erGlobal: boolean
+    +dokumenter: Dokument[]
 }
 
-Milepel -- Kode
-Milepel -- Fase
+Milepel -- Milepeltype
 
-class Kode {
+class Milepeltype {
     +kodeverdi: string
     +kodebeskrivelse: string
+}
+
+Milepel -- MilepelStatusEnum
+Milepel -* Dokument
+
+enum MilepelStatusEnum {
+    +Nådd
+    +Planlagt
 }
 
 @enduml

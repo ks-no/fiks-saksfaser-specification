@@ -40,11 +40,14 @@
         "referanseDokument": {
             "type": "string"
         },
-        "faseFoerMilepel": {
-            "$ref": "no.ks.fiks.saksfaser.v1.felles.fase.schema.json"
+        "erStart": {
+            "type": "boolean"
         },
-        "faseEtterMilepel": {
-            "$ref": "no.ks.fiks.saksfaser.v1.felles.fase.schema.json"
+        "erSlutt": {
+            "type": "boolean"
+        },
+        "status": {
+            
         }
     },
     "required": [

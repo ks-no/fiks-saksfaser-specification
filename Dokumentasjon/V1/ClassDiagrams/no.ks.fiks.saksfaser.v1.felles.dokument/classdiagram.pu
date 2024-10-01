@@ -1,0 +1,31 @@
+@startuml
+
+
+class Dokument {
+    +id: string
+    +tittel: string
+    +filnavn: string
+    +dokumenttype: Dokumenttype
+    +referanseDokumentfil: ReferanseDokumentfil
+    +mimetype: string
+    +dokumentsdato: date
+    +arkivnavn: string
+}
+
+note top of Dokument : Hentet definisjon fra Fiks Plan
+
+Dokument -- Dokumenttype
+Dokument -- ReferanseDokumentfil
+
+class Dokumenttype <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class ReferanseDokumentfil {
+    +id: string
+    +url: string
+}
+
+
+@enduml
