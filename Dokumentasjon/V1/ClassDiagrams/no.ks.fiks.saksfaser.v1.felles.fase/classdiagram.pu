@@ -38,11 +38,11 @@ class Milepel {
     +systemId: string
     +beskrivelse: string
     +kategori: Milepeltype
-    +frist: date
-    +utfoert: date
+    +fristdato: date
+    +utfoertdato: date
     +journaldato: date
     +intern: boolean
-    +referanseJournalpost: string
+    +referanseJournalpost: ReferanseJournalpost
     +referanseDokument: string
     +erStart: boolean
     +erSlutt: boolean
@@ -52,6 +52,42 @@ class Milepel {
 }
 
 Milepel -- Milepeltype
+Milepel -- ReferanseJournalpost
+
+class Milepeltype {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class ReferanseJournalpost {
+    +systemId: string
+    +registreringsID: string
+    +journalnummer: Journalnummer
+    +saksJournalpostnummer: SaksJournalpostnummer
+    +referanseEksternNoekkel: EksternNoekkel
+}
+
+Milepel -- MilepelStatusEnum
+Milepel -* Dokument
+ReferanseJournalpost -- EksternNoekkel
+ReferanseJournalpost -- SaksJournalpostnummer
+ReferanseJournalpost -- Journalnummer
+
+class SaksJournalpostnummer {
+    +saksaar: number
+    +sakssekvensnummer: number
+    +journalpostnummer: number
+}
+
+class Journalnummer {
+    +journalaar: number
+    +journalsekvensnummer: number
+}
+
+class EksternNoekkel {
+    +fagsystem: string
+    +noekkel: string
+}
 
 class Dokument {
     +id: string
@@ -62,6 +98,11 @@ class Dokument {
     +mimetype: string
     +dokumentsdato: date
     +arkivnavn: string
+}
+
+enum MilepelStatusEnum {
+    +Nådd
+    +Planlagt
 }
 
 @enduml

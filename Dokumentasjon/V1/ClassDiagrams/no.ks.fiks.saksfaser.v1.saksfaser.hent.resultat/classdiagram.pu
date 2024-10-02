@@ -64,7 +64,7 @@ class Milepel {
     +utfoert: date
     +journaldato: date
     +intern: boolean
-    +referanseJournalpost: string
+    +referanseJournalpost: ReferanseJournalpost
     +referanseDokument: string
     +erStart: boolean
     +erSlutt: boolean
@@ -78,6 +78,38 @@ Milepel -- Milepeltype
 
 note bottom of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
  
+Milepel -- ReferanseJournalpost
+ 
+class ReferanseJournalpost {
+    +systemId: string
+    +registreringsID: string
+    +journalnummer: Journalnummer
+    +saksJournalpostnummer: SaksJournalpostnummer
+    +referanseEksternNoekkel: EksternNoekkel
+}
+
+Milepel -- MilepelStatusEnum
+Milepel -* Dokument
+ReferanseJournalpost -- EksternNoekkel
+ReferanseJournalpost -- SaksJournalpostnummer
+ReferanseJournalpost -- Journalnummer
+
+class SaksJournalpostnummer {
+    +saksaar: number
+    +sakssekvensnummer: number
+    +journalpostnummer: number
+}
+
+class Journalnummer {
+    +journalaar: number
+    +journalsekvensnummer: number
+}
+
+class EksternNoekkel {
+    +fagsystem: string
+    +noekkel: string
+}
+
 class Milepeltype <<Kode>> {
     +kodeverdi: string
     +kodebeskrivelse: string
