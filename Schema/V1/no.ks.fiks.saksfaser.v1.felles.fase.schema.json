@@ -52,6 +52,7 @@
         }
     },
     "required": [
-        "fasenavn"
+        "fasenavn",
+        "faseid"
     ]
 }

@@ -12,7 +12,7 @@
         },
         "kategori": {
             "type": "object",
-            "description" : "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.prosesskategori.json",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.prosesskategori.json",
             "properties": {
                 "kodeverdi": {
                     "type": "string"
@@ -47,7 +47,20 @@
             "type": "boolean"
         },
         "status": {
-            
+            "type": "string",
+            "enum": [
+                "Nådd",
+                "Planlagt"
+            ]
+        },
+        "erGlobal": {
+            "type": "boolean"
+        },
+        "dokumenter": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.dokument.schema.json"
+            }
         }
     },
     "required": [

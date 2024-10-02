@@ -55,6 +55,9 @@ _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 
 ![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.saksfaser.hent.resultat/classdiagram.svg)
 
+- Fase inneholder mulighetene for å gi en liste med dokumenter. Dette er fordi vi gjenbruker fase objektet for hent faser og hent en enkelt fase.
+- Milepel inneholder mulighetene for å gi en liste med dokumenter. Dette er fordi vi gjenbruker milepel objektetet for hent faser og hent en enkelt fase.
+- Dokumenter vil være ikke påkrevd under milepel eller fase.
 - Milepeler er liste under fase. Kan være 2, start og slutt, eller flere. Alt etter brukstilfelle.
 
 #### Melding - Hent saksfase

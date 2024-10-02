@@ -14,10 +14,11 @@ note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nIn
 class Fase {
     +fasenavn: string
     +faseid: string
+    +kategori: Fasekategori
     +milepeler: Milepel[]
     +status: FaseStatusEnum
-    +kategori: Fasekategori
     +vedtak: Vedtak
+    +dokumenter: Dokument[]
 }
 
 note right of Fase::faseid
@@ -62,11 +63,14 @@ class Milepel {
     +frist: date
     +utfoert: date
     +journaldato: date
+    +intern: boolean
     +referanseJournalpost: string
     +referanseDokument: string
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
+    +erGlobal: boolean
+    +dokumenter: Dokument[]
 }
 
 Milepel -- MilepelStatusEnum
