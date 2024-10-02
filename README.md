@@ -40,6 +40,12 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 - Kodeverdi og kodebeskrivelse for kode-objekter er navn hentet fra andre protokoller som vi ønsker å bruke videre i denne protokollen.
 - Det ble diskutert om Milepel som objekt burde være likt i Hent saksfaser og Hent saksfase. Vi konkluderte ikke noe her, men tar det opp igjen på neste møte. Det er fordeler og ulemper med å gjøre det likt.
 
+#### Fra møtet 02.10.2024
+- Vi gjorde noen endringer på modellene
+- Det dukket opp noen spørsmål som vi registrerte som issues her: https://github.com/ks-no/fiks-saksfaser-specification/issues
+- Vedtak på fase kom opp igjen. Vi laget et issue her som vi får dokumentert svar på og jeg tar det inn i dokumentasjonen: https://github.com/ks-no/fiks-saksfaser-specification/issues/5
+- Vi kom fram til at vi trenger å få invitert med de som jobber med NPS for å få avklart flere ting etter høstferien.
+
 ### Wiki
 
 Det er opprettet og begynt på en Wiki for Fiks Saksfaser.
