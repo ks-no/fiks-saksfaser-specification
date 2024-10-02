@@ -40,6 +40,12 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 - Kodeverdi og kodebeskrivelse for kode-objekter er navn hentet fra andre protokoller som vi ønsker å bruke videre i denne protokollen.
 - Det ble diskutert om Milepel som objekt burde være likt i Hent saksfaser og Hent saksfase. Vi konkluderte ikke noe her, men tar det opp igjen på neste møte. Det er fordeler og ulemper med å gjøre det likt.
 
+### Wiki
+
+Det er opprettet og begynt på en Wiki for Fiks Saksfaser.
+Les mer [her](https://github.com/ks-no/fiks-saksfaser-specification/wiki) eller følg lenkene under.
+
+#### [Brukstilfeller](https://github.com/ks-no/fiks-saksfaser-specification/wiki#brukstilfeller)
 
 ### Json schemas
 _Schemas er ikke oppdatert. Se klassediagram under for innspill_
