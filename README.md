@@ -1,6 +1,8 @@
-# fiks-saksfaser-specification
+# ![](KSDigital25.png) Kontrakter og dokumentasjon for Fiks Saksfaser
 
 _Under arbeid_
+> Fiks Saksfaser er en modernisering av GI Saksfaser 1.1 og det nye grensesnittet som anbefales brukt.
+
 
 ### Utgangspunkt
 Vi har brukt datamodellene for _prosesser_ fra eByggesak (se diagram 1.5 på side 23) som utgangspunkt
