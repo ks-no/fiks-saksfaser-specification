@@ -9,6 +9,7 @@ class SaksfaserHentResultat {
 SaksfaserHentResultat -* Fase
 SaksfaserHentResultat -- Saksnummer
 
+note top of SaksfaserHentResultat : Rekkefølgen av faser er den rekkefølgen som fasene har.
 note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg. 
 
 class Fase {
@@ -62,19 +63,18 @@ class Milepel {
     +kategori: Milepeltype
     +frist: date
     +utfoert: date
-    +journaldato: date
+    +planlagtTil: date
     +intern: boolean
     +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: string
+    +referanseDokument: ReferanseDokument
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
-    +erGlobal: boolean
-    +dokumenter: Dokument[]
 }
 
 Milepel -- MilepelStatusEnum
 Milepel -- Milepeltype
+Milepel -- ReferanseDokument
 
 note bottom of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
  

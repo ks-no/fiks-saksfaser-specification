@@ -48,6 +48,16 @@ T- jener vil kun gi offentlige data, ikke skjermet data.
 - Vedtak på fase kom opp igjen. Vi laget et issue her som vi får dokumentert svar på og jeg tar det inn i dokumentasjonen: https://github.com/ks-no/fiks-saksfaser-specification/issues/5
 - Vi kom fram til at vi trenger å få invitert med de som jobber med NPS for å få avklart flere ting etter høstferien.
 
+#### Fra møtet 16.10.2024
+Vi så noen endringer vi ønsker å gjøre på Milepel:
+- Ta bort Journaldato. Dette finner man via ReferanseJournalpost
+- referanseDokument kan ikke være en string, men bør være et objekt slik som i Fiks Arkiv
+- Rekkefølgen faser kommer i listen i SaksfaserHentResultat er rekkefølgen fasene har.
+- Ta bort erGlobal
+- Legge til planlagtTil - dato
+- Ta bort listen med dokumenter da dette kan hentes via Fiks Arkiv i stedet
+
+
 ### Wiki
 
 Det er opprettet og begynt på en Wiki for Fiks Saksfaser.
@@ -73,6 +83,7 @@ _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 - Milepel inneholder mulighetene for å gi en liste med dokumenter. Dette er fordi vi gjenbruker milepel objektetet for hent faser og hent en enkelt fase.
 - Dokumenter vil være ikke påkrevd under milepel eller fase.
 - Milepeler er liste under fase. Kan være 2, start og slutt, eller flere. Alt etter brukstilfelle.
+- Rekkefølgen for fasene er rekkefølgen de er i listen over faser i SaksfaserHentResultat
 
 #### Melding - Hent saksfase
 
