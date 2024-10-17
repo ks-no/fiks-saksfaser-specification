@@ -6,6 +6,11 @@ class SaksfaserHentResultat {
     +faser: Fase[]
 }
 
+note left of SaksfaserHentResultat::faser
+    Rekkefølgen av Fase objekter i faser er signifikant.
+    Det er den rekkefølgen fasene har.
+end note
+
 SaksfaserHentResultat -* Fase
 SaksfaserHentResultat -- Saksnummer
 
@@ -62,19 +67,18 @@ class Milepel {
     +kategori: Milepeltype
     +frist: date
     +utfoert: date
-    +journaldato: date
+    +planlagtTil: date
     +intern: boolean
     +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: string
+    +referanseDokument: ReferanseDokumentfil
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
-    +erGlobal: boolean
-    +dokumenter: Dokument[]
 }
 
 Milepel -- MilepelStatusEnum
 Milepel -- Milepeltype
+Milepel -- ReferanseDokumentfil
 
 note bottom of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
  
@@ -88,7 +92,6 @@ class ReferanseJournalpost {
     +referanseEksternNoekkel: EksternNoekkel
 }
 
-Milepel -- MilepelStatusEnum
 Milepel -* Dokument
 ReferanseJournalpost -- EksternNoekkel
 ReferanseJournalpost -- SaksJournalpostnummer
