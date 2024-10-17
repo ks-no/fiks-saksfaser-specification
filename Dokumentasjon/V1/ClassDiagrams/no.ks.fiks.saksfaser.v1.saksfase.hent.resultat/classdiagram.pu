@@ -39,18 +39,19 @@ class Milepel {
     +kategori: Milepeltype
     +frist: date
     +utfoert: date
-    +planlagtTil: date
+    +journaldato: date
     +intern: boolean
     +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: ReferanseDokument
+    +referanseDokument: string
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
+    +erGlobal: boolean
+    +dokumenter: Dokument[]
 }
 
 Milepel -- Milepeltype
 Milepel -- ReferanseJournalpost
-Milepel -- ReferanseDokument
 
 note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
  
