@@ -2,7 +2,6 @@
 !include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.fase/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.saksnummer/classdiagram.pu
 
 class HentSaksfaseResultat {
     +fase: Fase
