@@ -4,20 +4,23 @@ class Milepel {
     +systemId: string
     +beskrivelse: string
     +kategori: Milepeltype
-    +fristdato: date
-    +utfoertdato: date
-    +journaldato: date
+    +frist: date
+    +utfoert: date
+    +planlagtTil: date
     +intern: boolean
     +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: string
+    +referanseDokument: ReferanseDokumentfil
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
-    +erGlobal: boolean
-    +dokumenter: Dokument[]
 }
 
 Milepel -- Milepeltype
+
+note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
+
+note bottom of Milepel: frist og utfoert ikke påkrevd
+
 
 class Milepeltype {
     +kodeverdi: string
@@ -35,7 +38,6 @@ class ReferanseJournalpost {
 }
 
 Milepel -- MilepelStatusEnum
-Milepel -* Dokument
 ReferanseJournalpost -- EksternNoekkel
 ReferanseJournalpost -- SaksJournalpostnummer
 ReferanseJournalpost -- Journalnummer
@@ -60,33 +62,5 @@ enum MilepelStatusEnum {
     +Nådd
     +Planlagt
 }
-
-
-class Dokument {
-    +id: string
-    +tittel: string
-    +filnavn: string
-    +dokumenttype: Dokumenttype
-    +referanseDokumentfil: ReferanseDokumentfil
-    +mimetype: string
-    +dokumentsdato: date
-    +arkivnavn: string
-}
-
-note top of Dokument : Hentet definisjon fra Fiks Plan
-
-Dokument -- Dokumenttype
-Dokument -- ReferanseDokumentfil
-
-class Dokumenttype <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
-
-class ReferanseDokumentfil {
-    +id: string
-    +url: string
-}
-
 
 @enduml

@@ -1,14 +1,10 @@
 @startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.saksnummer/classdiagram.pu
 
 class HentSaksfaser {
     +saksnummer: Saksnummer
 }
 
 HentSaksfaser -- Saksnummer
-
-class Saksnummer {
-    +saksaar: integer
-    +sakssekvensnummer: integer 
-}
 
 @enduml

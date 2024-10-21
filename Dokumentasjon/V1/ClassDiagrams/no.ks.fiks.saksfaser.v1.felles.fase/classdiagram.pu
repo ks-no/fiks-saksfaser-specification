@@ -10,11 +10,16 @@ class Fase {
     +dokumenter: Dokument[]
 }
 
-Fase -* Dokument
-Fase -- Milepel
-Fase -- Fasekategori
+note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg.
+
+note right of Fase::faseid
+    Faseid brukes alene (ikke sammen med saksnummer) for å hente en enkelt fase
+    Den må dermed være unik 
+end note 
+
 Fase -- Vedtak
 Fase -- FaseStatusEnum
+Fase -- Fasekategori
 
 enum FaseStatusEnum {
     +Planlagt
@@ -34,75 +39,7 @@ class Fasekategori <<Kode>> {
     +kodebeskrivelse: string
 }
 
-class Milepel {
-    +systemId: string
-    +beskrivelse: string
-    +kategori: Milepeltype
-    +fristdato: date
-    +utfoertdato: date
-    +journaldato: date
-    +intern: boolean
-    +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: string
-    +erStart: boolean
-    +erSlutt: boolean
-    +status: MilepelStatusEnum
-    +erGlobal: boolean
-    +dokumenter: Dokument[]
-}
+note bottom of Fasekategori : Se gjerne Byggesaksbehandling::Prosesskategori\n fra NPS\nVi må få avklart denne kodelisten\nEksempler:\nKlage\nHøring 
 
-Milepel -- Milepeltype
-Milepel -- ReferanseJournalpost
-
-class Milepeltype {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
-
-class ReferanseJournalpost {
-    +systemId: string
-    +registreringsID: string
-    +journalnummer: Journalnummer
-    +saksJournalpostnummer: SaksJournalpostnummer
-    +referanseEksternNoekkel: EksternNoekkel
-}
-
-Milepel -- MilepelStatusEnum
-Milepel -* Dokument
-ReferanseJournalpost -- EksternNoekkel
-ReferanseJournalpost -- SaksJournalpostnummer
-ReferanseJournalpost -- Journalnummer
-
-class SaksJournalpostnummer {
-    +saksaar: number
-    +sakssekvensnummer: number
-    +journalpostnummer: number
-}
-
-class Journalnummer {
-    +journalaar: number
-    +journalsekvensnummer: number
-}
-
-class EksternNoekkel {
-    +fagsystem: string
-    +noekkel: string
-}
-
-class Dokument {
-    +id: string
-    +tittel: string
-    +filnavn: string
-    +dokumenttype: Dokumenttype
-    +referanseDokumentfil: ReferanseDokumentfil
-    +mimetype: string
-    +dokumentsdato: date
-    +arkivnavn: string
-}
-
-enum MilepelStatusEnum {
-    +Nådd
-    +Planlagt
-}
 
 @enduml
