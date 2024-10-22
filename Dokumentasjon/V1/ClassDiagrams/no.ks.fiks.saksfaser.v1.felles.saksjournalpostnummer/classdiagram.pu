@@ -1,0 +1,9 @@
+@startuml
+
+class SaksJournalpostnummer {
+    +saksaar: number
+    +sakssekvensnummer: number
+    +journalpostnummer: number
+}
+
+@enduml

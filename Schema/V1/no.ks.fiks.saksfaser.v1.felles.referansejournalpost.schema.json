@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.referansejournalpost.schema.json",
+    "title": "referansejournalpst",
+    "type": "object",
+    "properties": {
+        "systemId": {
+            "description": "En unik id",
+            "type": "string"
+        },
+        "registreringsId": {
+            "type": "string"
+        },
+        "journalnummer": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.journalnummer.schema.json"
+        },
+        "saksJournalpostnummer": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.saksjournalpostnummer.schema.json"
+        },
+        "referanseEksternNoekkel": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.eksternnoekkel.schema.json"
+        }
+    },
+    "required": [
+        "id",
+        "url"
+    ]
+}

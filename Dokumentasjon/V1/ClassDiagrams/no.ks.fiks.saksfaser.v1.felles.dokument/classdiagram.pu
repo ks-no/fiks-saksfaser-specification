@@ -1,5 +1,5 @@
 @startuml
-
+!include ./../no.ks.fiks.saksfaser.v1.felles.referansedokumentfil/classdiagram.pu
 
 class Dokument {
     +id: string
@@ -21,11 +21,5 @@ class Dokumenttype <<Kode>> {
     +kodeverdi: string
     +kodebeskrivelse: string
 }
-
-class ReferanseDokumentfil {
-    +id: string
-    +url: string
-}
-
 
 @enduml

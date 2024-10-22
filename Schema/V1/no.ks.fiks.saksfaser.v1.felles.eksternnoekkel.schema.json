@@ -1,0 +1,18 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.eksternnoekkel.schema.json",
+    "title": "eksternnoekkel",
+    "type": "object",
+    "properties": {
+        "fagsystem": {
+            "type": "string"
+        },
+        "noekkel": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "fagsystem",
+        "noekkel"
+    ]
+}

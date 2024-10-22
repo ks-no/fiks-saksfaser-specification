@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.referansedokumentfil.schema.json",
+    "title": "referansedokumentfil",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "En unik id",
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+    },
+    "required": [
+        "id",
+        "url",
+    ]
+}

@@ -1,4 +1,10 @@
 @startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.eksternnoekkel/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.journalnummer/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.saksjournalpostnummer/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.referansedokumentfil/classdiagram.pu
+
 
 class Milepel {
     +systemId: string
@@ -28,35 +34,15 @@ class Milepeltype {
 }
 
 Milepel -- ReferanseJournalpost
+Milepel -- ReferanseDokumentfil
 
-class ReferanseJournalpost {
-    +systemId: string
-    +registreringsID: string
-    +journalnummer: Journalnummer
-    +saksJournalpostnummer: SaksJournalpostnummer
-    +referanseEksternNoekkel: EksternNoekkel
+class ReferanseDokumentfil {
 }
 
 Milepel -- MilepelStatusEnum
 ReferanseJournalpost -- EksternNoekkel
 ReferanseJournalpost -- SaksJournalpostnummer
 ReferanseJournalpost -- Journalnummer
-
-class SaksJournalpostnummer {
-    +saksaar: number
-    +sakssekvensnummer: number
-    +journalpostnummer: number
-}
-
-class Journalnummer {
-    +journalaar: number
-    +journalsekvensnummer: number
-}
-
-class EksternNoekkel {
-    +fagsystem: string
-    +noekkel: string
-}
 
 enum MilepelStatusEnum {
     +Nådd
