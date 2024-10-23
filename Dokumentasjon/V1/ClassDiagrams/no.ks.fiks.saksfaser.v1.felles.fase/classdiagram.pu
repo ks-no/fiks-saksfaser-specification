@@ -1,14 +1,19 @@
 @startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
+
+
 
 class Fase {
-    +fasenavn: string
-    +faseid: string
-    +kategori: Fasekategori
-    +milepeler: Milepel[]
-    +status: FaseStatusEnum
-    +vedtak: Vedtak
-    +dokumenter: Dokument[]
+    *faseid: string
+    *fasenavn: string
+    *kategori: Fasekategori
+    *status: FaseStatusEnum
+    milepeler: Milepel[]
+    vedtak: Vedtak
+    referanseJournalpost: ReferanseJournalpost[]
 }
+
+Fase -* ReferanseJournalpost
 
 note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg.
 
@@ -30,16 +35,16 @@ enum FaseStatusEnum {
 note top of Vedtak : Eksempler:\ngodkjent\ndelvis godkjent\navslått\navvist 
 
 class Vedtak <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
+    *kodeverdi: string
+    kodebeskrivelse: string
 }
 
 class Fasekategori <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
+    *kodeverdi: string
+    kodebeskrivelse: string
 }
 
-note bottom of Fasekategori : Se gjerne Byggesaksbehandling::Prosesskategori\n fra NPS\nVi må få avklart denne kodelisten\nEksempler:\nKlage\nHøring 
+note bottom of Fasekategori : Se gjerne Byggesaksbehandling::Prosesskategori\n fra NPS\nVi må få avklart denne kodelisten\nVi må ha en som er generell som betyr at det ikke er fastsatt hvis kategori skal være required.\nEksempler:\nKlage\nHøring 
 
 
 @enduml
