@@ -57,6 +57,11 @@ Vi så noen endringer vi ønsker å gjøre på Milepel:
 - Legge til planlagtTil - dato
 - Ta bort listen med dokumenter da dette kan hentes via Fiks Arkiv i stedet
 
+#### Fra møtet 23.10.2024
+- Godkjente forrige ukes endringer
+- Endret navn fra planlagtTil til planlagtUtfoert
+- Endret liste med dokumenter til liste med referanseJournalpost
+- Diskusjon rundt issue [#10](https://github.com/ks-no/fiks-saksfaser-specification/issues/10). Se kommentarer
 
 ### Wiki
 
