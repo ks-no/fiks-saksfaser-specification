@@ -59,7 +59,9 @@ Vi så noen endringer vi ønsker å gjøre på Milepel:
 
 #### Fra møtet 23.10.2024
 - Godkjente forrige ukes endringer
+- Endret navn fra systemId til milepelId på Milepel
 - Endret navn fra planlagtTil til planlagtUtfoert
+- Begynte å markere felter som er påkrevd og valgfrie i modellene
 - Endret liste med dokumenter til liste med referanseJournalpost
 - Diskusjon rundt issue [#10](https://github.com/ks-no/fiks-saksfaser-specification/issues/10). Se kommentarer
 
