@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "no.ks.fiks.saksnummer.v1.felles.milepel.schema.json",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.milepel.schema.json",
     "title": "Milepel",
     "type": "object",
     "properties": {
@@ -28,17 +28,17 @@
         "utfoert": {
             "type": "date"
         },
-        "journaldato": {
+        "planlagtTil": {
             "type": "date"
         },
         "intern": {
             "type": "boolean"
         },
         "referanseJournalpost": {
-            "type": "string"
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.referansejournalpost.schema.json"
         },
         "referanseDokument": {
-            "type": "string"
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.referansedokumentfil.schema.json"
         },
         "erStart": {
             "type": "boolean"
@@ -52,15 +52,6 @@
                 "Nådd",
                 "Planlagt"
             ]
-        },
-        "erGlobal": {
-            "type": "boolean"
-        },
-        "dokumenter": {
-            "type": "array",
-            "items": {
-                "$ref": "no.ks.fiks.saksfaser.v1.felles.dokument.schema.json"
-            }
         }
     },
     "required": [

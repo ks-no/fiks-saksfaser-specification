@@ -1,0 +1,8 @@
+@startuml
+
+class ReferanseDokumentfil {
+    +id: string
+    +url: string
+}
+
+@enduml

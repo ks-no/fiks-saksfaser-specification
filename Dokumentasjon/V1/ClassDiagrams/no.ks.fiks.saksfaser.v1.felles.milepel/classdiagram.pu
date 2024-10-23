@@ -1,23 +1,34 @@
 @startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.eksternnoekkel/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.journalnummer/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.saksjournalpostnummer/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.referansedokumentfil/classdiagram.pu
+
 
 class Milepel {
     +systemId: string
     +beskrivelse: string
     +kategori: Milepeltype
-    +fristdato: date
-    +utfoertdato: date
-    +journaldato: date
+    +frist: date
+    +utfoert: date
+    +planlagtUtfoert: date
     +intern: boolean
     +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: string
+    +referanseDokument: ReferanseDokumentfil
     +erStart: boolean
     +erSlutt: boolean
     +status: MilepelStatusEnum
-    +erGlobal: boolean
-    +dokumenter: Dokument[]
 }
 
+note top of Milepel : planlagtUtfoert er hvis man har laget en milepel plan \nså kan man sette denne datoen for når det er planlagt å være ferdig
+
 Milepel -- Milepeltype
+
+note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
+
+note bottom of Milepel: frist og utfoert ikke påkrevd
+
 
 class Milepeltype {
     +kodeverdi: string
@@ -25,68 +36,19 @@ class Milepeltype {
 }
 
 Milepel -- ReferanseJournalpost
+Milepel -- ReferanseDokumentfil
 
-class ReferanseJournalpost {
-    +systemId: string
-    +registreringsID: string
-    +journalnummer: Journalnummer
-    +saksJournalpostnummer: SaksJournalpostnummer
-    +referanseEksternNoekkel: EksternNoekkel
+class ReferanseDokumentfil {
 }
 
 Milepel -- MilepelStatusEnum
-Milepel -* Dokument
 ReferanseJournalpost -- EksternNoekkel
 ReferanseJournalpost -- SaksJournalpostnummer
 ReferanseJournalpost -- Journalnummer
-
-class SaksJournalpostnummer {
-    +saksaar: number
-    +sakssekvensnummer: number
-    +journalpostnummer: number
-}
-
-class Journalnummer {
-    +journalaar: number
-    +journalsekvensnummer: number
-}
-
-class EksternNoekkel {
-    +fagsystem: string
-    +noekkel: string
-}
 
 enum MilepelStatusEnum {
     +Nådd
     +Planlagt
 }
-
-
-class Dokument {
-    +id: string
-    +tittel: string
-    +filnavn: string
-    +dokumenttype: Dokumenttype
-    +referanseDokumentfil: ReferanseDokumentfil
-    +mimetype: string
-    +dokumentsdato: date
-    +arkivnavn: string
-}
-
-note top of Dokument : Hentet definisjon fra Fiks Plan
-
-Dokument -- Dokumenttype
-Dokument -- ReferanseDokumentfil
-
-class Dokumenttype <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
-
-class ReferanseDokumentfil {
-    +id: string
-    +url: string
-}
-
 
 @enduml

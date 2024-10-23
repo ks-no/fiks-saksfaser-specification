@@ -1,4 +1,9 @@
 @startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.fase/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.saksnummer/classdiagram.pu
+
 class SaksfaserHentResultat {
     +saksnummer: Saksnummer
     +sakstittel: string
@@ -6,123 +11,21 @@ class SaksfaserHentResultat {
     +faser: Fase[]
 }
 
+note left of SaksfaserHentResultat::faser
+    Rekkefølgen av Fase objekter i faser er signifikant.
+    Det er den rekkefølgen fasene har.
+end note
+
 SaksfaserHentResultat -* Fase
 SaksfaserHentResultat -- Saksnummer
 
-note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg. 
-
-class Fase {
-    +fasenavn: string
-    +faseid: string
-    +kategori: Fasekategori
-    +milepeler: Milepel[]
-    +status: FaseStatusEnum
-    +vedtak: Vedtak
-    +dokumenter: Dokument[]
-}
 
 note right of Fase::faseid
     Faseid brukes alene (ikke sammen med saksnummer) for å hente en enkelt fase
     Den må dermed være unik 
 end note
 
-class Fasekategori <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
-
-note bottom of Fasekategori : Se gjerne Byggesaksbehandling::Prosesskategori\n fra NPS\nVi må få avklart denne kodelisten\nEksempler:\nKlage\nHøring 
-
-
-Fase -- Fasekategori
-Fase -- Vedtak
-
-note top of Vedtak : Eksempler:\ngodkjent\ndelvis godkjent\navslått\navvist 
-
-class Vedtak <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
-
-Fase -- FaseStatusEnum
-
-enum FaseStatusEnum {
-    +Planlagt
-    +UnderArbeid
-    +Utfoert
-}
-
 Fase -- Milepel
-
-note bottom of Milepel: frist og utfoert ikke påkrevd
-
-class Milepel {
-    +systemId: string
-    +beskrivelse: string
-    +kategori: Milepeltype
-    +frist: date
-    +utfoert: date
-    +journaldato: date
-    +intern: boolean
-    +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: string
-    +erStart: boolean
-    +erSlutt: boolean
-    +status: MilepelStatusEnum
-    +erGlobal: boolean
-    +dokumenter: Dokument[]
-}
-
-Milepel -- MilepelStatusEnum
-Milepel -- Milepeltype
-
-note bottom of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
- 
-Milepel -- ReferanseJournalpost
- 
-class ReferanseJournalpost {
-    +systemId: string
-    +registreringsID: string
-    +journalnummer: Journalnummer
-    +saksJournalpostnummer: SaksJournalpostnummer
-    +referanseEksternNoekkel: EksternNoekkel
-}
-
-Milepel -- MilepelStatusEnum
-Milepel -* Dokument
-ReferanseJournalpost -- EksternNoekkel
-ReferanseJournalpost -- SaksJournalpostnummer
-ReferanseJournalpost -- Journalnummer
-
-class SaksJournalpostnummer {
-    +saksaar: number
-    +sakssekvensnummer: number
-    +journalpostnummer: number
-}
-
-class Journalnummer {
-    +journalaar: number
-    +journalsekvensnummer: number
-}
-
-class EksternNoekkel {
-    +fagsystem: string
-    +noekkel: string
-}
-
-class Milepeltype <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
-
-enum MilepelStatusEnum {
-    +Nådd
-    +Planlagt
-}
-
-class Saksnummer {
-    +saksaar: integer
-    +sakssekvensnummer: integer 
-}
+Fase -* Dokument
 
 @enduml

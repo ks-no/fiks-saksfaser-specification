@@ -1,0 +1,11 @@
+@startuml
+
+class ReferanseJournalpost {
+    +systemId: string
+    +registreringsID: string
+    +journalnummer: Journalnummer
+    +saksJournalpostnummer: SaksJournalpostnummer
+    +referanseEksternNoekkel: EksternNoekkel
+}
+
+@enduml
