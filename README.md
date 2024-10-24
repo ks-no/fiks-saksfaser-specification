@@ -75,8 +75,12 @@ Les mer [her](https://github.com/ks-no/fiks-saksfaser-specification/wiki) eller 
 ### Json schemas
 _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 
-### Klassediagram
+### Entitet diagrammer
 
+Forklaring for diagrammene:
+
+- Diagrammene viser hvordan datamodellene vil se ut for skjema i protokollen
+- Sort punkt foran feltnavn viser felter som er påkrevd. Resten er ikke påkrevd
 
 #### Melding - Hent saksfaser
 
