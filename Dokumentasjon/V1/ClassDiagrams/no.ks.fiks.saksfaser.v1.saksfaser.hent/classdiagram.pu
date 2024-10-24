@@ -2,7 +2,7 @@
 !include ./../no.ks.fiks.saksfaser.v1.felles.saksnummer/classdiagram.pu
 
 class HentSaksfaser {
-    +saksnummer: Saksnummer
+    *saksnummer: Saksnummer
 }
 
 HentSaksfaser -- Saksnummer

@@ -4,10 +4,10 @@
     "title": "fase",
     "type": "object",
     "properties": {
-        "fasenavn": {
+        "faseid": {
             "type": "string"
         },
-        "faseid": {
+        "fasenavn": {
             "type": "string"
         },
         "kategori": {
@@ -22,15 +22,15 @@
                 }
             }
         },
+        "status": {
+            "type": "string",
+            "enum": ["Planlagt", "UnderArbeid", "Utfoert"]            
+        },
         "milepeler": {
             "type": "array",
             "items": {
                 "$ref": "no.ks.fiks.saksfaser.v1.felles.milepel.schema.json"
             }
-        },
-        "status": {
-            "type": "string",
-            "enum": ["Planlagt", "UnderArbeid", "Utfoert"]            
         },
         "vedtak": {
             "type": "object",
@@ -42,17 +42,22 @@
                 "kodebeskrivelse": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "kodeverdi"
+            ]
         },
-        "dokumenter": {
+        "referanseJournalpost": {
             "type": "array",
             "items": {
-                "$ref": "no.ks.fiks.saksfaser.v1.felles.dokument.schema.json"
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.referansejournalpost.schema.json"
             }
         }
     },
     "required": [
+        "faseid",
         "fasenavn",
-        "faseid"
+        "kategori",
+        "status"
     ]
 }

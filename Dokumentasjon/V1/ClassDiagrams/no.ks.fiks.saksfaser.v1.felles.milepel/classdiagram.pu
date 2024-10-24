@@ -7,18 +7,18 @@
 
 
 class Milepel {
-    +systemId: string
-    +beskrivelse: string
-    +kategori: Milepeltype
-    +frist: date
-    +utfoert: date
-    +planlagtUtfoert: date
-    +intern: boolean
-    +referanseJournalpost: ReferanseJournalpost
-    +referanseDokument: ReferanseDokumentfil
-    +erStart: boolean
-    +erSlutt: boolean
-    +status: MilepelStatusEnum
+    *milepelId: string
+    *beskrivelse: string
+    milepeltype: Milepeltype
+    frist: date
+    utfoert: date
+    planlagtUtfoert: date
+    *intern: boolean
+    referanseJournalpost: ReferanseJournalpost
+    referanseDokument: ReferanseDokumentfil
+    erStart: boolean
+    erSlutt: boolean
+    *status: MilepelStatusEnum
 }
 
 note top of Milepel : planlagtUtfoert er hvis man har laget en milepel plan \nså kan man sette denne datoen for når det er planlagt å være ferdig

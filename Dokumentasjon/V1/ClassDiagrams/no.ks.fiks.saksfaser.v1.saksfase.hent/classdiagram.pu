@@ -1,6 +1,6 @@
 @startuml
 class HentSaksfase {
-    +faseid: string
+    *faseid: string
 }
 note top of HentSaksfase : Kun faseid som nøkkel og ikke nødvendig med saksnummer.\nFaseid skal være tilstrekkelig som id for å kunne hente en fase fra en sak 
 @enduml

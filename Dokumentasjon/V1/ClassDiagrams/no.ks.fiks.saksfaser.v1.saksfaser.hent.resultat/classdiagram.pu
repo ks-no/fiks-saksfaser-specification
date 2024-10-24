@@ -5,10 +5,10 @@
 !include ./../no.ks.fiks.saksfaser.v1.felles.saksnummer/classdiagram.pu
 
 class SaksfaserHentResultat {
-    +saksnummer: Saksnummer
-    +sakstittel: string
-    +saksansvarlig: string
-    +faser: Fase[]
+    *saksnummer: Saksnummer
+    *sakstittel: string
+    *saksansvarlig: string
+    *faser: Fase[]
 }
 
 note left of SaksfaserHentResultat::faser

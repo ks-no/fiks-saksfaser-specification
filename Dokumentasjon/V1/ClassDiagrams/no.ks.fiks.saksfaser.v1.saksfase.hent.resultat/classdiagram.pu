@@ -4,7 +4,7 @@
 !include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
 
 class HentSaksfaseResultat {
-    +fase: Fase
+    *fase: Fase
 }
 
 HentSaksfaseResultat -- Fase
