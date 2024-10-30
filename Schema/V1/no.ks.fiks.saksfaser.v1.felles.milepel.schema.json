@@ -4,7 +4,7 @@
     "title": "Milepel",
     "type": "object",
     "properties": {
-        "systemId": {
+        "milepelId": {
             "type": "string"
         },
         "beskrivelse": {
@@ -55,5 +55,9 @@
         }
     },
     "required": [
+        "milepelId",
+        "beskrivelse",
+        "intern",
+        "status"
     ]
 }

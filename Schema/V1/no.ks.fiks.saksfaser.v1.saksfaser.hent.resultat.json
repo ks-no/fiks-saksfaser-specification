@@ -20,5 +20,11 @@
                 "$ref": "no.ks.fiks.saksfaser.v1.felles.fase.schema.json"
             }
         }
-    }
+    },
+    "required": [
+        "saksnummer",
+        "sakstittel",
+        "saksansvarlig",
+        "faser"
+    ]
 }

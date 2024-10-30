@@ -57,6 +57,13 @@ Vi så noen endringer vi ønsker å gjøre på Milepel:
 - Legge til planlagtTil - dato
 - Ta bort listen med dokumenter da dette kan hentes via Fiks Arkiv i stedet
 
+#### Fra møtet 23.10.2024
+- Godkjente forrige ukes endringer
+- Endret navn fra systemId til milepelId på Milepel
+- Endret navn fra planlagtTil til planlagtUtfoert
+- Begynte å markere felter som er påkrevd og valgfrie i modellene
+- Endret liste med dokumenter til liste med referanseJournalpost
+- Diskusjon rundt issue [#10](https://github.com/ks-no/fiks-saksfaser-specification/issues/10). Se kommentarer
 
 ### Wiki
 
@@ -68,8 +75,12 @@ Les mer [her](https://github.com/ks-no/fiks-saksfaser-specification/wiki) eller 
 ### Json schemas
 _Schemas er ikke oppdatert. Se klassediagram under for innspill_
 
-### Klassediagram
+### Entitet diagrammer
 
+Forklaring for diagrammene:
+
+- Diagrammene viser hvordan datamodellene vil se ut for skjema i protokollen
+- Sort punkt foran feltnavn viser felter som er påkrevd. Resten er ikke påkrevd
 
 #### Melding - Hent saksfaser
 

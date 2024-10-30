@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "no.ks.fiks.saksfaser.v1.felles.referansejournalpost.schema.json",
-    "title": "referansejournalpst",
+    "title": "referansejournalpost",
     "type": "object",
     "properties": {
         "systemId": {
@@ -20,9 +20,5 @@
         "referanseEksternNoekkel": {
             "$ref": "no.ks.fiks.saksfaser.v1.felles.eksternnoekkel.schema.json"
         }
-    },
-    "required": [
-        "id",
-        "url"
-    ]
+    }
 }

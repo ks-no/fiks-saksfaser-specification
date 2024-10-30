@@ -1,8 +1,8 @@
 @startuml
 
 class Saksnummer {
-    +saksaar: integer
-    +sakssekvensnummer: integer 
+    *saksaar: integer
+    *sakssekvensnummer: integer 
 }
 
 @enduml
