@@ -1,13 +1,13 @@
 @startuml
 !include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
 
-
-
 class Fase {
     *faseid: string
     *fasenavn: string
     *kategori: Fasekategori
     *status: FaseStatusEnum
+    startDato: date
+    sluttDato: date
     milepeler: Milepel[]
     vedtak: Vedtak
     referanseJournalpost: ReferanseJournalpost[]
