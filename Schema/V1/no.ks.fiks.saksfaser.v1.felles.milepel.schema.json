@@ -23,13 +23,16 @@
             }
         },
         "frist": {
-            "type": "date"
+            "type": "string",
+            "format": "date"
         },
         "utfoert": {
-            "type": "date"
+            "type": "string",
+            "format": "date"
         },
         "planlagtTil": {
-            "type": "date"
+            "type": "string",
+            "format": "date"
         },
         "intern": {
             "type": "boolean"
