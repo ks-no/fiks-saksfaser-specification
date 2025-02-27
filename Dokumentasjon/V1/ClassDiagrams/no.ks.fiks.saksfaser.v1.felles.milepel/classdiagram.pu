@@ -16,8 +16,6 @@ class Milepel {
     *intern: boolean
     referanseJournalpost: ReferanseJournalpost
     referanseDokument: ReferanseDokumentfil
-    erStart: boolean
-    erSlutt: boolean
     *status: MilepelStatusEnum
 }
 
@@ -47,7 +45,8 @@ ReferanseJournalpost -- SaksJournalpostnummer
 ReferanseJournalpost -- Journalnummer
 
 enum MilepelStatusEnum {
-    +Nådd
+    +Naadd
+    +IkkeNaadd
     +Planlagt
 }
 

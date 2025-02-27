@@ -9,7 +9,8 @@ class HentSaksfaseResultat {
 
 HentSaksfaseResultat -- Fase
 
-Fase -* Dokument
 Fase -- Milepel
+
+
 
 @enduml

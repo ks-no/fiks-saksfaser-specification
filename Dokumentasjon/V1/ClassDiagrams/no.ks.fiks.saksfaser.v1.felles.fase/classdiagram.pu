@@ -1,8 +1,9 @@
 @startuml
 !include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 
 class Fase {
-    *faseid: string
+    *faseId: string
     *fasenavn: string
     *kategori: Fasekategori
     *status: FaseStatusEnum
@@ -10,10 +11,93 @@ class Fase {
     sluttDato: date
     milepeler: Milepel[]
     vedtak: Vedtak
-    referanseJournalpost: ReferanseJournalpost[]
+    journalpost: Journalpost[]
 }
 
-Fase -* ReferanseJournalpost
+Fase .. Journalpost
+
+class Journalpost {
+    systemId: string
+    skjerming: Skjerming
+    gradering: Gradering
+    dokumentbeskrivelse: Dokumentbeskrivelse[]
+    registreringsId: string
+    tittel: string
+    offentligTittel: string
+    korrespondansepart: Korrespondansepart
+    journalaar: number
+    journalsekvensnummer: number
+    journalpostnummer: number
+    journalposttype: Journalposttype
+    journalstatus: Journalstatus
+    journaldato: date
+    dokumentetsDato: date
+}
+
+Journalpost .. Journalposttype
+Journalpost .. Journalstatus
+Journalpost .. Dokumentbeskrivelse
+Dokumentbeskrivelse .. Gradering
+Dokumentbeskrivelse .. Skjerming
+
+class Journalposttype <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+class Journalstatus <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+class Skjerming {
+    *tilgangsrestriksjon: Tilgangsrestriksjon
+    *skjermingshjemmel: string
+    skjermingOpphoererDato: date
+    skjermingOpphoererAksjon: date
+}
+
+Skjerming .. Tilgangsrestriksjon
+
+class Tilgangsrestriksjon <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+class Gradering {
+   *grad: Grad
+   *graderingsdato: date
+   *gradertAv: string
+   nedgraderingsdato: date
+   nedgradertAv: string
+}
+
+class Grad <<Kode>> {
+    *kodeverdi: string
+        kodebeskrivelse: string
+}
+
+class Dokumentbeskrivelse {
+    systemId: string
+    dokumenttype: Dokumenttype
+    dokumentstatus: Dokumentstatus
+    dokumentobjekt: Dokument
+}
+
+Dokumentbeskrivelse .. Dokumenttype
+Dokumentbeskrivelse .. Dokumentstatus
+Dokumentbeskrivelse .. Dokument
+
+class Dokumenttype <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+
+class Dokumentstatus <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
 
 note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg.
 
@@ -22,9 +106,9 @@ note right of Fase::faseid
     Den må dermed være unik 
 end note 
 
-Fase -- Vedtak
-Fase -- FaseStatusEnum
-Fase -- Fasekategori
+Fase .. Vedtak
+Fase .. FaseStatusEnum
+Fase .. Fasekategori
 
 enum FaseStatusEnum {
     +Planlagt
