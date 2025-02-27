@@ -1,8 +1,8 @@
 @startuml
 
 class Journalnummer {
-    *journalnummer: number
-    *journalsekvensnummer: number
+    *journalnummer: integer
+    *journalsekvensnummer: integer
 }
 
 @enduml
