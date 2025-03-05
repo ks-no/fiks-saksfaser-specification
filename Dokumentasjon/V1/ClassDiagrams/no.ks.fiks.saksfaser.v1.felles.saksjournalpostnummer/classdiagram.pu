@@ -1,9 +1,9 @@
 @startuml
 
 class SaksJournalpostnummer {
-    *saksaar: number
-    *sakssekvensnummer: number
-    *journalpostnummer: number
+    *saksaar: integer
+    *sakssekvensnummer: integer
+    *journalpostnummer: integer
 }
 
 @enduml

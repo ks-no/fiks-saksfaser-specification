@@ -1,0 +1,35 @@
+@startuml
+
+class Journalpost {
+    systemId: string
+    skjerming: Skjerming
+    gradering: Gradering
+    dokumentbeskrivelse: Dokumentbeskrivelse[]
+    registreringsId: string
+    tittel: string
+    offentligTittel: string
+    korrespondansepart: Korrespondansepart
+    journalaar: integer
+    journalsekvensnummer: integer
+    journalpostnummer: integer
+    journalposttype: Journalposttype
+    journalstatus: Journalstatus
+    journaldato: date
+    dokumentetsDato: date
+}
+
+Journalpost .. Journalposttype
+Journalpost .. Journalstatus
+
+class Journalposttype <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+class Journalstatus <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+
+@enduml

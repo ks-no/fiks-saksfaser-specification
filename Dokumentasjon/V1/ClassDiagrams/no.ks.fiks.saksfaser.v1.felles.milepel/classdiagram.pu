@@ -3,7 +3,6 @@
 !include ./../no.ks.fiks.saksfaser.v1.felles.journalnummer/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.saksjournalpostnummer/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.referansedokumentfil/classdiagram.pu
 
 
 class Milepel {
@@ -15,8 +14,6 @@ class Milepel {
     planlagtUtfoert: date
     *intern: boolean
     referanseJournalpost: ReferanseJournalpost
-    referanseDokument: ReferanseDokumentfil
-    *status: MilepelStatusEnum
 }
 
 note top of Milepel : planlagtUtfoert er hvis man har laget en milepel plan \nså kan man sette denne datoen for når det er planlagt å være ferdig
@@ -34,20 +31,11 @@ class Milepeltype {
 }
 
 Milepel -- ReferanseJournalpost
-Milepel -- ReferanseDokumentfil
 
-class ReferanseDokumentfil {
-}
-
-Milepel -- MilepelStatusEnum
 ReferanseJournalpost -- EksternNoekkel
 ReferanseJournalpost -- SaksJournalpostnummer
 ReferanseJournalpost -- Journalnummer
 
-enum MilepelStatusEnum {
-    +Naadd
-    +IkkeNaadd
-    +Planlagt
-}
+
 
 @enduml

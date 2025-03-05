@@ -9,7 +9,7 @@ class Dokument {
     mimetype: string
     dokumentsdato: date
     arkivnavn: string
-    filstoerrelse: int
+    filstoerrelse: integer
 }
 
 note top of Dokument : Hentet definisjon fra Fiks Plan
