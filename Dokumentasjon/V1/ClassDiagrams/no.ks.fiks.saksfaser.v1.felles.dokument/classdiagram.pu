@@ -3,9 +3,8 @@
 
 class Dokument {
     *id: string
-    filnavn: string
-    dokumenttype: Dokumenttype
-    referanseDokumentfil: ReferanseDokumentfil
+    *filnavn: string
+    *referanseDokumentfil: ReferanseDokumentfil
     mimetype: string
     dokumentsdato: date
     arkivnavn: string

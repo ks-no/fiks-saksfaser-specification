@@ -1,14 +1,18 @@
 @startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.skjerming/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.gradering/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.dokumentbeskrivelse/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.korrespondansepart/classdiagram.pu
 
 class Journalpost {
     systemId: string
     skjerming: Skjerming
     gradering: Gradering
-    dokumentbeskrivelse: Dokumentbeskrivelse[]
+    dokumentbeskrivelser: Dokumentbeskrivelse[]
     registreringsId: string
     tittel: string
     offentligTittel: string
-    korrespondansepart: Korrespondansepart
+    korrespondanseparter: Korrespondansepart[]
     journalaar: integer
     journalsekvensnummer: integer
     journalpostnummer: integer
@@ -18,8 +22,14 @@ class Journalpost {
     dokumentetsDato: date
 }
 
+Journalpost .. Skjerming
+Journalpost .. Gradering
+Journalpost .. Dokumentbeskrivelse
+Journalpost .. Korrespondansepart
 Journalpost .. Journalposttype
 Journalpost .. Journalstatus
+
+
 
 class Journalposttype <<Kode>> {
     *kodeverdi: string

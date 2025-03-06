@@ -1,14 +1,11 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "no.ks.fiks.saksfaser.v1.felles.dokument.schema.json",
-    "title": "dokument",
+    "title": "Dokument",
     "type": "object",
     "properties": {
         "id": {
             "description": "En unik id som kan benyttes for unik identifisering av et dokumentobjekt. Påkrevd å returneres når man henter dokumentobjekt via tjenester. ",
-            "type": "string"
-        },
-        "tittel": {
             "type": "string"
         },
         "filnavn": {
@@ -40,12 +37,14 @@
         },
         "arkivnavn": {
             "type": "string"
+        },
+        "filstoerrelse": {
+            "type": "integer"
         }
     },
     "required": [
         "id",
-        "tittel",
+        "filnavn",
         "referanseDokumentfil",
-        "dokumenttype"
     ]
 }

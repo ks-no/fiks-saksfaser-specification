@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.gradering.schema.json",
+    "title": "Gradering",
+    "type": "object",
+    "properties": {
+        "grad": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.grad.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "kodeverdi"
+            ]
+        },
+        "graderingsdato": {
+            "type": "string",
+            "format": "date"
+        },
+        "gradertAv": {
+            "type": "string",
+        },
+        "nedgraderingsdato": {
+            "type": "string",
+            "format": "date"
+        },
+        "nedgradertAv": {
+            "type": "string",
+        }
+    },
+    "required": [
+        "grad",
+        "graderingsdato",
+        "gradertAv",
+    ]
+}

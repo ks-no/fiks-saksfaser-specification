@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.journalpost.schema.json",
+    "title": "Journalpost",
+    "type": "object",
+    "properties": {
+        "systemId": {
+            "type": "string"
+        },
+        "skjerming": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.skjerming.schema.json"
+        },
+        "gradering": {
+            "$ref": "no.ks.fiks.saksfaser.v1.felles.gradering.schema.json"
+        },
+        "dokumentbeskrivelser": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.dokumentbeskrivelse.schema.json"    
+            }
+        },
+        "registreringsId": {
+            "type": "string"
+        },
+        "tittel": {
+            "type": "string"
+        },
+        "offentligTittel": {
+            "type": "string"
+        },
+        "korrespondanseparter": {
+            "type": "array",
+            "items": {
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.korrespondansepart.schema.json"
+            }
+        },
+        "journalaar": {
+            "type": "integer"
+        },
+        "journalsekvensnummer": {
+            "type": "integer"
+        },
+        "journalpostnummer": {
+            "type": "integer"
+        },
+        "journalposttype": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.journalposttype.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "kodeverdi"
+            ]
+        },
+        "journalstatus": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.journalstatus.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "kodeverdi"
+            ]
+        },
+        "journaldato": {
+            "type": "string",
+            "format": "date"
+        },
+        "dokumentetsDato": {
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "required": [
+        "systemId",
+        "tittel"
+    ]
+}

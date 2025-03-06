@@ -1,9 +1,7 @@
 @startuml
 !include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.journalpost/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.skjerming/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.gradering/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.dokumentbeskrivelse/classdiagram.pu
+
 
 class Fase {
     *faseId: string
@@ -14,14 +12,10 @@ class Fase {
     sluttDato: date
     milepeler: Milepel[]
     vedtak: Vedtak
-    journalpost: Journalpost[]
+    referanseJournalpost: Journalpost[]
 }
 
 Fase .. Journalpost
-
-Journalpost .. Dokumentbeskrivelse
-Journalpost .. Gradering
-Journalpost .. Skjerming
 
 note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg.
 

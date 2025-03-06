@@ -2,10 +2,10 @@
 !include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 
 class Dokumentbeskrivelse {
-    systemId: string
-    tittel: string
-    dokumenttype: Dokumenttype
-    dokumentobjekt: Dokument
+    *systemId: string
+    *tittel: string
+    *dokumenttype: Dokumenttype
+    *dokumentobjekt: Dokument
 }
 
 Dokumentbeskrivelse .. Dokumenttype

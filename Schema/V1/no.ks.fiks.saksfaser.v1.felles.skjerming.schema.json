@@ -1,0 +1,49 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.skjerming.schema.json",
+    "title": "Skjerming",
+    "type": "object",
+    "properties": {
+        "tilgangsrestriksjon": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.tilgangsrestriksjon.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "kodeverdi"
+            ]
+        },
+        "skjermingshjemmel": {
+            "type": "string"
+        },
+        "skjermingOpphoererDato": {
+            "type": "string",
+            "format": "date"
+        },
+        "skjermingOpphoererAksjon": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.skjermingopphoereraksjon.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "kodeverdi"
+            ]
+        }
+    },
+    "required": [
+        "tilgangsrestriksjon",
+        "skjermingshjemmel"
+    ]
+}
