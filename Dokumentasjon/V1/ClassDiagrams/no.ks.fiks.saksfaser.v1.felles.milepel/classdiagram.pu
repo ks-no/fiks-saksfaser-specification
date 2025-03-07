@@ -18,7 +18,7 @@ class Milepel {
 
 note top of Milepel : planlagtUtfoert er hvis man har laget en milepel plan \nså kan man sette denne datoen for når det er planlagt å være ferdig
 
-Milepel -- Milepeltype
+Milepel .. Milepeltype
 
 note top of Milepeltype : Eksempler: \nBestilling av oppstartsmøte (BO)\nGjennomført oppstartsmøte (OM)\nMottak av planforslag
 
@@ -30,11 +30,11 @@ class Milepeltype {
     +kodebeskrivelse: string
 }
 
-Milepel -- ReferanseJournalpost
+Milepel .. ReferanseJournalpost
 
-ReferanseJournalpost -- EksternNoekkel
-ReferanseJournalpost -- SaksJournalpostnummer
-ReferanseJournalpost -- Journalnummer
+ReferanseJournalpost .. EksternNoekkel
+ReferanseJournalpost .. SaksJournalpostnummer
+ReferanseJournalpost .. Journalnummer
 
 
 

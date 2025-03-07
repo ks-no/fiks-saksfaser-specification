@@ -1,7 +1,5 @@
 @startuml
-!include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.fase/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.saksnummer/classdiagram.pu
 
 class SaksfaserHentResultat {
@@ -16,16 +14,13 @@ note left of SaksfaserHentResultat::faser
     Det er den rekkefølgen fasene har.
 end note
 
-SaksfaserHentResultat -* Fase
-SaksfaserHentResultat -- Saksnummer
+SaksfaserHentResultat .* Fase
+SaksfaserHentResultat .. Saksnummer
 
 
 note right of Fase::faseid
     Faseid brukes alene (ikke sammen med saksnummer) for å hente en enkelt fase
     Den må dermed være unik 
 end note
-
-Fase -- Milepel
-Fase -* Dokument
 
 @enduml

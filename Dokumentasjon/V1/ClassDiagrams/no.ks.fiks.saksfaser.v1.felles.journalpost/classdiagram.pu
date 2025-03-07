@@ -24,8 +24,8 @@ class Journalpost {
 
 Journalpost .. Skjerming
 Journalpost .. Gradering
-Journalpost .. Dokumentbeskrivelse
-Journalpost .. Korrespondansepart
+Journalpost .* Dokumentbeskrivelse
+Journalpost .* Korrespondansepart
 Journalpost .. Journalposttype
 Journalpost .. Journalstatus
 

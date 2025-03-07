@@ -5,6 +5,6 @@ class HentSaksfaser {
     *saksnummer: Saksnummer
 }
 
-HentSaksfaser -- Saksnummer
+HentSaksfaser .. Saksnummer
 
 @enduml

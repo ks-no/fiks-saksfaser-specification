@@ -13,6 +13,6 @@ class Dokument {
 
 note top of Dokument : Hentet definisjon fra Fiks Plan
 
-Dokument -- ReferanseDokumentfil
+Dokument .. ReferanseDokumentfil
 
 @enduml

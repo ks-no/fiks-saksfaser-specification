@@ -1,6 +1,6 @@
 @startuml
-!include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.journalpost/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
 
 
 class Fase {
@@ -15,7 +15,8 @@ class Fase {
     referanseJournalpost: Journalpost[]
 }
 
-Fase .. Journalpost
+Fase .* Journalpost
+Fase .* Milepel
 
 note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg.
 
