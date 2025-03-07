@@ -8,4 +8,9 @@ class ReferanseJournalpost {
     referanseEksternNoekkel: EksternNoekkel
 }
 
+note left of ReferanseJournalpost {
+    Ingen av feltene er påkrevd,
+     men man kan velge hvilken identifikator man vil bruke
+}
+
 @enduml

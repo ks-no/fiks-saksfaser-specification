@@ -1,17 +1,17 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "no.ks.fiks.saksfaser.v1.felles.saksjournalpostnummer.schema.json",
-    "title": "saksjournalpostnummer",
+    "title": "Saksjournalpostnummer",
     "type": "object",
     "properties": {
         "saksaar": {
-            "type": "number"
+            "type": "integer"
         },
         "sakssekvensnummer": {
-            "type": "number"
+            "type": "integer"
         },
         "journalpostnummer": {
-            "type": "number"
+            "type": "integer"
         }
     },
     "required": [
