@@ -4,15 +4,15 @@
     "title": "journalnummer",
     "type": "object",
     "properties": {
-        "journalnummer": {
-            "type": "number"
+        "journalaar": {
+            "type": "integer"
         },
         "journalsekvensnummer": {
-            "type": "number"
+            "type": "integer"
         }
     },
     "required": [
-        "journalnummer",
+        "journalaar",
         "journalsekvensnummer"
     ]
 }

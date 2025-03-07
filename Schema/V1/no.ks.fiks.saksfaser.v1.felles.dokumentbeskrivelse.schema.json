@@ -20,7 +20,10 @@
                 "kodebeskrivelse": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "kodeverdi"
+            ]
         },
         "dokumentobjekt": {
             "$ref": "no.ks.fiks.saksfaser.v1.felles.dokument.schema.json"

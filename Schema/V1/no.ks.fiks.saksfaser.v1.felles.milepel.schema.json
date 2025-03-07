@@ -20,7 +20,10 @@
                 "kodebeskrivelse": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "kodeverdi"
+            ]
         },
         "frist": {
             "type": "date"
@@ -45,19 +48,11 @@
         },
         "erSlutt": {
             "type": "boolean"
-        },
-        "status": {
-            "type": "string",
-            "enum": [
-                "Nådd",
-                "Planlagt"
-            ]
         }
     },
     "required": [
         "milepelId",
         "beskrivelse",
-        "intern",
-        "status"
+        "intern"
     ]
 }

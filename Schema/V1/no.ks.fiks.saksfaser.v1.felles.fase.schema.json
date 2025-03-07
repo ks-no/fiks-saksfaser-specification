@@ -20,7 +20,10 @@
                 "kodebeskrivelse": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "kodeverdi"
+            ]
         },
         "status": {
             "type": "string",

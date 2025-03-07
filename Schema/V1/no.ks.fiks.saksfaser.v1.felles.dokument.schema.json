@@ -22,7 +22,10 @@
                 "kodebeskrivelse": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "kodeverdi"
+            ]
         },
         "referanseDokumentfil": {
             "description": "Dette er filnavn slik filen heter i meldingen. Vil normalt ikke inneholde tegn som komma, æøå etc. som gjerne er med i filnavn. Dette filnavnet vil med andre ord kunne være forskjellig fra 'filnavn' attributtet i enkelte tilfeller, f.eks. hvor meldingen inneholder flere filer med samme navn.",
