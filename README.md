@@ -63,3 +63,16 @@ Faseid får man ut fra hent saksfaser tjenesten.
 - Listen med dokumenter under Fase er summen av alle dokumenter for alle milepeler.
 - Listen med dokumenter under Milepel er nok stort sett bare 1 dokument, men som liste støtter vi evt tilfeller med flere dokumenter. Dokumenter under Milepel vil også ligge i listen under Fase.
 - Dokument objektet inneholder referanse til dokumentet slik at det kan hentes og nok metadata til å vise til bruker. 
+
+
+#### Objekt - Fase
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.fase/classdiagram.svg)
+
+#### Objekt - Milepel
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.svg)
+
+#### Objekt - Journalpost
+
+![](Dokumentasjon/V1/ClassDiagrams/no.ks.fiks.saksfaser.v1.felles.journalpost/classdiagram.svg)
