@@ -20,7 +20,10 @@
                 "kodebeskrivelse": {
                     "type": "string"
                 }
-            }
+            },
+            "required": [
+                "kodeverdi"
+            ]
         },
         "status": {
             "type": "string",
@@ -50,7 +53,7 @@
         "referanseJournalpost": {
             "type": "array",
             "items": {
-                "$ref": "no.ks.fiks.saksfaser.v1.felles.referansejournalpost.schema.json"
+                "$ref": "no.ks.fiks.saksfaser.v1.felles.journalpost.schema.json"
             }
         }
     },

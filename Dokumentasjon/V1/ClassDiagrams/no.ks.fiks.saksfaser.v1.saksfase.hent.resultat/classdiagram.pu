@@ -1,15 +1,10 @@
 @startuml
-!include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
 !include ./../no.ks.fiks.saksfaser.v1.felles.fase/classdiagram.pu
-!include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
 
 class HentSaksfaseResultat {
     *fase: Fase
 }
 
-HentSaksfaseResultat -- Fase
-
-Fase -* Dokument
-Fase -- Milepel
+HentSaksfaseResultat .. Fase
 
 @enduml

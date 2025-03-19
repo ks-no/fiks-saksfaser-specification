@@ -3,23 +3,16 @@
 
 class Dokument {
     *id: string
-    tittel: string
-    filnavn: string
-    dokumenttype: Dokumenttype
-    referanseDokumentfil: ReferanseDokumentfil
+    *filnavn: string
+    *referanseDokumentfil: ReferanseDokumentfil
     mimetype: string
     dokumentsdato: date
     arkivnavn: string
+    filstoerrelse: integer
 }
 
 note top of Dokument : Hentet definisjon fra Fiks Plan
 
-Dokument -- Dokumenttype
-Dokument -- ReferanseDokumentfil
-
-class Dokumenttype <<Kode>> {
-    +kodeverdi: string
-    +kodebeskrivelse: string
-}
+Dokument .. ReferanseDokumentfil
 
 @enduml

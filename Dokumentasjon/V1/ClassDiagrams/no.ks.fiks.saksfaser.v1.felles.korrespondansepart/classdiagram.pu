@@ -1,0 +1,15 @@
+@startuml
+
+class Korrespondansepart {
+    *Korrespondanseparttype: Korrespondanseparttype
+    *korrespondansepartnavn: string
+}
+
+Korrespondansepart .. Korrespondanseparttype
+
+class Korrespondanseparttype <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+@enduml

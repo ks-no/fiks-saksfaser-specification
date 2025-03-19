@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.saksfaser.v1.felles.korrespondansepart.schema.json",
+    "title": "Korrespondansepart",
+    "type": "object",
+    "properties": {
+        "korrespondanseparttype": {
+            "type": "object",
+            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.korrespondanseparttype.json",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "kodeverdi"
+            ]
+        },
+        "korrespondansepartnavn": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "korrespondanseparttype",
+        "korrespondansepartnavn"
+    ]
+}

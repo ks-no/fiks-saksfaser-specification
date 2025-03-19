@@ -1,0 +1,19 @@
+@startuml
+!include ./../no.ks.fiks.saksfaser.v1.felles.dokument/classdiagram.pu
+
+class Dokumentbeskrivelse {
+    *systemId: string
+    *tittel: string
+    *dokumenttype: Dokumenttype
+    *dokumentobjekt: Dokument
+}
+
+Dokumentbeskrivelse .. Dokumenttype
+Dokumentbeskrivelse .. Dokument
+
+class Dokumenttype <<Kode>> {
+    *kodeverdi: string
+    kodebeskrivelse: string
+}
+
+@enduml

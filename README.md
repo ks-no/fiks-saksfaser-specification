@@ -3,12 +3,9 @@
 _Under arbeid_
 > Fiks Saksfaser er en modernisering av GI Saksfaser 1.1 og det nye grensesnittet som anbefales brukt.
 
-
 ### Utgangspunkt
 Vi har brukt datamodellene for _prosesser_ fra eByggesak (se diagram 1.5 på side 23) som utgangspunkt
 https://www.ks.no/globalassets/fagomrader/digitalisering/verktoykasse-plan--og-byggesaker/verktoy/ebyggesak/vedleggspakke-ebyggesak-v2.1.pdf
-
-
 
 ### Noen mål for protokollen:
 
@@ -17,18 +14,9 @@ https://www.ks.no/globalassets/fagomrader/digitalisering/verktoykasse-plan--og-b
 - Det skal gi nok informasjon til at man skal kunne f.eks. sende inn et innspill fra en innsyns/publiseringsløsning.
 - Gi nok informasjon om dokumenter til at man skal kunne hente selve dokumentet via Fiks Arkiv
 
-
 ### [Møtereferat](Dokumentasjon/V1/Motereferat/README.md)
 Ukentlige møter blir avholdt hvor vi jobber med protokollen.
-Notater fra møtene er [her](Dokumentasjon/V1/Motereferat/README.md).
-
-#### Fra møtet 23.10.2024
-- Godkjente forrige ukes endringer
-- Endret navn fra systemId til milepelId på Milepel
-- Endret navn fra planlagtTil til planlagtUtfoert
-- Begynte å markere felter som er påkrevd og valgfrie i modellene
-- Endret liste med dokumenter til liste med referanseJournalpost
-- Diskusjon rundt issue [#10](https://github.com/ks-no/fiks-saksfaser-specification/issues/10). Se kommentarer
+Notater fra møtene med eventuelle konklusjoner og bestemmelser finner man [her](Dokumentasjon/V1/Motereferat/README.md).
 
 ### Wiki
 

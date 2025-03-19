@@ -1,0 +1,18 @@
+@startuml
+
+class Gradering {
+   *grad: Grad
+   *graderingsdato: date
+   *gradertAv: string
+   nedgraderingsdato: date
+   nedgradertAv: string
+}
+
+Gradering .. Grad
+
+class Grad <<Kode>> {
+    *kodeverdi: string
+        kodebeskrivelse: string
+}
+
+@enduml

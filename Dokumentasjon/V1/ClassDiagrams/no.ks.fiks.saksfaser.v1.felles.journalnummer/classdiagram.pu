@@ -1,7 +1,7 @@
 @startuml
 
 class Journalnummer {
-    *journalnummer: integer
+    *journalaar: integer
     *journalsekvensnummer: integer
 }
 

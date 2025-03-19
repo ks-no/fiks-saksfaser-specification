@@ -51,3 +51,11 @@ Vi så noen endringer vi ønsker å gjøre på Milepel:
 - Godkjente og merget inn forrige ukes endringer da det ikke har kommet noen kommentarer på det
 - For kodelister skal vi henvise Geonorge sine sider: https://register.geonorge.no/kodelister/ebyggesak/milepel
 - Kodelistene der skal oppdateres
+
+#### Fra møtet 26.02.2025
+- Vi gikk gjennom listen med spørsmål i issue [#15](https://github.com/ks-no/fiks-saksfaser-specification/issues/15) og fant løsning på dem. De fleste var allerede løst og lagt inn i main.
+
+#### Fra møtet 05.03.2025
+- Vi bestemte oss for å ta bort MilepelStatus i Milepel objektet. Det ble konkludert at status var redundant informasjon da man finner status ut i fra dato feltene i Milepel (frist, utfoert osv.)
+- Vi gikk gjennom forslaget i PR [#14](https://github.com/ks-no/fiks-saksfaser-specification/pull/14) med å legge til journalpost med dokumentbeskrivelse og dokument m.m. som var et resultat fra et spørsmål i issue [#15](https://github.com/ks-no/fiks-saksfaser-specification/issues/15).
+- Det ble nevnt at foreløpig er ikke Fiks Saksfaser høyt prioritert mtp utvikling, og at Fiks Plan har høyest prioritert.

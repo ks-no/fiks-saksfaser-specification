@@ -4,7 +4,7 @@
     "title": "Journalnummer",
     "type": "object",
     "properties": {
-        "journalnummer": {
+        "journalaar": {
             "type": "integer"
         },
         "journalsekvensnummer": {
@@ -12,7 +12,7 @@
         }
     },
     "required": [
-        "journalnummer",
+        "journalaar",
         "journalsekvensnummer"
     ]
 }

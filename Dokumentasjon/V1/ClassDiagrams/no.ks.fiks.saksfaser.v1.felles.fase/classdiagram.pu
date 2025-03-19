@@ -1,19 +1,22 @@
 @startuml
-!include ./../no.ks.fiks.saksfaser.v1.felles.referansejournalpost/classdiagram.pu
-
+!include ./../no.ks.fiks.saksfaser.v1.felles.journalpost/classdiagram.pu
+!include ./../no.ks.fiks.saksfaser.v1.felles.milepel/classdiagram.pu
 
 
 class Fase {
-    *faseid: string
+    *faseId: string
     *fasenavn: string
     *kategori: Fasekategori
     *status: FaseStatusEnum
+    startDato: date
+    sluttDato: date
     milepeler: Milepel[]
     vedtak: Vedtak
-    referanseJournalpost: ReferanseJournalpost[]
+    referanseJournalpost: Journalpost[]
 }
 
-Fase -* ReferanseJournalpost
+Fase .* Journalpost
+Fase .* Milepel
 
 note top of Fase : En fase er i hovedsak det som hender mellom to milepeler.\nInterne faser sendes ikke ut ved denne protokollen. Vi kutter derfor ut Global flagg.
 
@@ -22,9 +25,9 @@ note right of Fase::faseid
     Den må dermed være unik 
 end note 
 
-Fase -- Vedtak
-Fase -- FaseStatusEnum
-Fase -- Fasekategori
+Fase .. Vedtak
+Fase .. FaseStatusEnum
+Fase .. Fasekategori
 
 enum FaseStatusEnum {
     +Planlagt
