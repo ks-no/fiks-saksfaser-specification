@@ -10,9 +10,9 @@
         "beskrivelse": {
             "type": "string"
         },
-        "kategori": {
+        "milepeltype": {
             "type": "object",
-            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.prosesskategori.json",
+            "description": "Kodeliste eksempler: BO - Bestilling av oppstartsmøte, OM - Gjennomført oppstartsmøte ",
             "properties": {
                 "kodeverdi": {
                     "type": "string"
@@ -33,7 +33,7 @@
             "type": "string",
             "format": "date"
         },
-        "planlagtTil": {
+        "planlagtUtfoert": {
             "type": "string",
             "format": "date"
         },
@@ -42,15 +42,6 @@
         },
         "referanseJournalpost": {
             "$ref": "no.ks.fiks.saksfaser.v1.felles.referansejournalpost.schema.json"
-        },
-        "referanseDokument": {
-            "$ref": "no.ks.fiks.saksfaser.v1.felles.referansedokumentfil.schema.json"
-        },
-        "erStart": {
-            "type": "boolean"
-        },
-        "erSlutt": {
-            "type": "boolean"
         }
     },
     "required": [

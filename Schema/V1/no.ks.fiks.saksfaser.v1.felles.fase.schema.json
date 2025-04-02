@@ -29,6 +29,14 @@
             "type": "string",
             "enum": ["Planlagt", "UnderArbeid", "Utfoert"]            
         },
+        "startdato": {
+            "type": "string",
+            "format": "date"
+        },
+        "sluttdato": {
+            "type": "string",
+            "format": "date"
+        },
         "milepeler": {
             "type": "array",
             "items": {
@@ -50,7 +58,7 @@
                 "kodeverdi"
             ]
         },
-        "referanseJournalpost": {
+        "journalposter": {
             "type": "array",
             "items": {
                 "$ref": "no.ks.fiks.saksfaser.v1.felles.journalpost.schema.json"

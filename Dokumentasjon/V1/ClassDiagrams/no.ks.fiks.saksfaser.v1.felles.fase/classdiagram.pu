@@ -8,11 +8,11 @@ class Fase {
     *fasenavn: string
     *kategori: Fasekategori
     *status: FaseStatusEnum
-    startDato: date
-    sluttDato: date
+    startdato: date
+    sluttdato: date
     milepeler: Milepel[]
     vedtak: Vedtak
-    referanseJournalpost: Journalpost[]
+    journalposter: Journalpost[]
 }
 
 Fase .* Journalpost

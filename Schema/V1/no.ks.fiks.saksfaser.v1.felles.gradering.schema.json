@@ -31,12 +31,12 @@
             "format": "date"
         },
         "nedgradertAv": {
-            "type": "string",
+            "type": "string"
         }
     },
     "required": [
         "grad",
         "graderingsdato",
-        "gradertAv",
+        "gradertAv"
     ]
 }

@@ -12,21 +12,6 @@
             "description": "Det opprinnelige filnavnet som gjerne skal brukes hvis filen lastes ned. Kan inneholde alle lovlige tegn for filnavn. Egnet også for visning.",
             "type": "string"
         },
-        "dokumenttype": {
-            "type": "object",
-            "description": "Kodeliste: no.ks.fiks.saksfaser.v1.kodelister.dokumenttyper.json",
-            "properties": {
-                "kodeverdi": {
-                    "type": "string"
-                },
-                "kodebeskrivelse": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "kodeverdi"
-            ]
-        },
         "referanseDokumentfil": {
             "description": "Dette er filnavn slik filen heter i meldingen. Vil normalt ikke inneholde tegn som komma, æøå etc. som gjerne er med i filnavn. Dette filnavnet vil med andre ord kunne være forskjellig fra 'filnavn' attributtet i enkelte tilfeller, f.eks. hvor meldingen inneholder flere filer med samme navn.",
             "$ref": "no.ks.fiks.saksfaser.v1.felles.referansedokumentfil.schema.json"
@@ -34,7 +19,7 @@
         "mimetype": {
             "type": "string"
         },
-        "dokumentsdato": {
+        "dokumentdato": {
             "type": "string",
             "format": "date"
         },
@@ -48,6 +33,6 @@
     "required": [
         "id",
         "filnavn",
-        "referanseDokumentfil",
+        "referanseDokumentfil"
     ]
 }

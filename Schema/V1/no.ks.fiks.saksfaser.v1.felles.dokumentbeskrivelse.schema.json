@@ -32,7 +32,7 @@
     "required": [
         "systemId",
         "tittel",
-        "dokumenttype"
+        "dokumenttype",
         "dokumentobjekt"
     ]
 }
