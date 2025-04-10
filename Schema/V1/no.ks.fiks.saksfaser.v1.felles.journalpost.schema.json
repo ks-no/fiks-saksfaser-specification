@@ -19,7 +19,7 @@
                 "$ref": "no.ks.fiks.saksfaser.v1.felles.dokumentbeskrivelse.schema.json"    
             }
         },
-        "registreringsId": {
+        "registreringsid": {
             "type": "string"
         },
         "tittel": {

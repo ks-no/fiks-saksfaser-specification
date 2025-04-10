@@ -2,7 +2,7 @@
 
 class ReferanseJournalpost {
     systemId: string
-    registreringsID: string
+    registreringsId: string
     journalnummer: Journalnummer
     saksJournalpostnummer: SaksJournalpostnummer
     referanseEksternNoekkel: EksternNoekkel

@@ -9,7 +9,7 @@ class Journalpost {
     skjerming: Skjerming
     gradering: Gradering
     dokumentbeskrivelser: Dokumentbeskrivelse[]
-    registreringsId: string
+    registreringsid: string
     tittel: string
     offentligTittel: string
     korrespondanseparter: Korrespondansepart[]
